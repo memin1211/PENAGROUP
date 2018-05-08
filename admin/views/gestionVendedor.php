@@ -57,7 +57,7 @@
                           <!--Table-->
                           <table class="table table-hover table-responsive-md table-fixed">
                               <!--Table head-->
-                              <thead class="blue-grey white-text">
+                              <thead class="special-color white-text">
                                   <tr>
                                       <th>CODIGO</th>
                                       <th>NOMBRE</th>

@@ -38,13 +38,13 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs nav-justified blue-gradient" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#panel5" role="tab"><i class="fa fa-address-book" aria-hidden="true"></i> Catálogo de Sucursales</a>
+                    <a class="nav-link active" data-toggle="tab" href="#panel5" role="tab"><i class="fa fa-address-book" aria-hidden="true"></i> Catálogo de Pagos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#panel6" role="tab"><i class="fa fa-plus" aria-hidden="true"></i></i> Nueva Sucursal</a>
+                    <a class="nav-link" data-toggle="tab" href="#panel6" role="tab"><i class="fa fa-plus" aria-hidden="true"></i></i> Nueva Pago</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-refresh" aria-hidden="true"></i> Modificar Sucursal</a>
+                    <a class="nav-link" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-refresh" aria-hidden="true"></i> Modificar Pago</a>
                 </li>
             </ul>
             <!-- Tab panels -->
@@ -61,8 +61,8 @@
                                   <tr>
                                       <th>CODIGO</th>
                                       <th>NOMBRE</th>
-                                      <th>DIRECCION</th>
-                                      <th>TELEFONO</th>
+                                      <th>FECHA EMISION</th>
+                                      <th>MONTO</th>
                                       <th>ESTADO</th>
                                   </tr>
                               </thead>
@@ -72,17 +72,17 @@
                               <tbody>
                                   <tr>
                                       <th scope="row">1</th>
-                                      <td>VENTA DE MEDICINA POPULAR Y MAS, SANTA MARIA</td>
-                                      <td>MEJICANOS, SAN SALVADOR</td>
-                                      <td>22525728</td>
-                                      <td>ACTIVO</td>
+                                      <td>CAESS EL SALVADOR S.A DE C.V</td>
+                                      <td>12/05/2018</td>
+                                      <td>$75.40</td>
+                                      <td>PENDIENTE</td>
                                   </tr>
                                   <tr>
                                     <th scope="row">2</th>
-                                    <td>VENTA DE MEDICINA POPULAR Y MAS, SAGRADA FAMILIA</td>
-                                    <td>SANTA TECLA, SAN SALVADOR</td>
-                                    <td>25849578</td>
-                                    <td>ACTIVO</td>
+                                    <td>TIGO EL SALVADOR S.A DE C.V</td>
+                                    <td>15/05/2018</td>
+                                    <td>45.50</td>
+                                    <td>PENDIENTE</td>
                                   </tr>
                               </tbody>
                               <!--Table body-->
@@ -97,27 +97,34 @@
                 <div class="tab-pane fade" id="panel6" role="tabpanel">
                     <!-- Material form contact -->
                      <form>
-                         <p class="h4 text-center mb-4">Nueva Sucursal</p>
+                         <p class="h4 text-center mb-4">Nuevo Pago</p>
 
                          <!-- Material input text -->
                          <div class="md-form">
-                             <i class="fa fa-institution prefix grey-text"></i>
+                             <i class="fa fa-user prefix grey-text"></i>
                              <input type="text" id="NombreSucursal" name="NombreSucursal" class="form-control" required>
-                             <label for="NombreSucursal">Nombre Sucursal</label>
+                             <label for="NombreSucursal">Proveedor</label>
                          </div>
 
                          <!-- Material input text -->
                          <div class="md-form">
-                             <i class="fa fa-address-card prefix grey-text"></i>
+                             <i class="fa fa-calendar prefix grey-text"></i>
                              <input type="text" id="DireccionSucursal" name="DireccionSucursal" class="form-control">
-                             <label for="DireccionSucursal">Dirección</label>
+                             <label for="DireccionSucursal">Fecha</label>
                          </div>
 
                          <!-- Material input text -->
                          <div class="md-form">
-                             <i class="fa fa-phone prefix grey-text"></i>
+                             <i class="fa fa-dollar prefix grey-text"></i>
                              <input type="text" id="TelefonoSucursal" name="TelefonoSucursal" class="form-control">
-                             <label for="TelefonoSucursal">Teléfono</label>
+                             <label for="TelefonoSucursal">Monto a Pagar</label>
+                         </div>
+
+                         <!-- Material input text -->
+                         <div class="md-form">
+                            <i class="fa fa-calendar prefix grey-text"></i>
+                            <input type="text" id="DireccionSucursal" name="DireccionSucursal" class="form-control">
+                            <label for="DireccionSucursal">Proxima Fecha de Pago</label>
                          </div>
                         <br>
 
@@ -132,27 +139,34 @@
                 <div class="tab-pane fade" id="panel7" role="tabpanel">
                    <!-- Material form contact -->
                     <form>
-                        <p class="h4 text-center mb-4">Modificar Sucursal</p>
+                        <p class="h4 text-center mb-4">Modificar Pago</p>
 
                         <!-- Material input text -->
                         <div class="md-form">
-                           <i class="fa fa-institution prefix grey-text"></i>
+                           <i class="fa fa-user prefix grey-text"></i>
                            <input type="text" id="NombreSucursal" name="NombreSucursal" class="form-control" required>
-                           <label for="NombreSucursal">Nombre Sucursal</label>
+                           <label for="NombreSucursal">Proveedor</label>
                         </div>
 
                         <!-- Material input text -->
                         <div class="md-form">
-                           <i class="fa fa-address-card prefix grey-text"></i>
+                           <i class="fa fa-calendar prefix grey-text"></i>
                            <input type="text" id="DireccionSucursal" name="DireccionSucursal" class="form-control">
-                           <label for="DireccionSucursal">Dirección</label>
+                           <label for="DireccionSucursal">Fecha</label>
                         </div>
 
                         <!-- Material input text -->
                         <div class="md-form">
-                           <i class="fa fa-phone prefix grey-text"></i>
+                           <i class="fa fa-dollar prefix grey-text"></i>
                            <input type="text" id="TelefonoSucursal" name="TelefonoSucursal" class="form-control">
-                           <label for="TelefonoSucursal">Teléfono</label>
+                           <label for="TelefonoSucursal">Monto a Pagar</label>
+                        </div>
+
+                        <!-- Material input text -->
+                        <div class="md-form">
+                           <i class="fa fa-calendar prefix grey-text"></i>
+                           <input type="text" id="DireccionSucursal" name="DireccionSucursal" class="form-control">
+                           <label for="DireccionSucursal">Proxima Fecha de Pago</label>
                         </div>
                        <br>
 
