@@ -112,26 +112,58 @@
                 <div class="tab-pane fade" id="panel6" role="tabpanel">
                     <!-- Material form contact -->
                      <form>
-                         <p class="h4 text-center mb-4">Nuevo Cliente</p>
+                         <p class="h4 text-center mb-4">Registrar Nuevo Cliente</p>
 
-                         <!-- Material input text -->
-                         <div class="md-form">
-                             <i class="fa fa-user prefix grey-text"></i>
-                             <input type="text" id="NombreCliente" name="NombreCliente" class="form-control" required>
-                             <label for="NombreCliente">Nombres</label>
+                         <div class="row">
+                           <div class="col-4">
+                             <!-- Material input text -->
+                             <div class="md-form">
+                                 <i class="fa fa-user prefix grey-text"></i>
+                                 <input type="text" id="PrimerNombreCliente" name="PrimerNombreCliente" class="form-control" required>
+                                 <label for="PrimerNombreCliente">Primer Nombre</label>
+                             </div>
+                           </div>
+                           <div class="col-4">
+                             <!-- Material input text -->
+                             <div class="md-form">
+                                 <i class="prefix grey-text"></i>
+                                 <input type="text" id="SegundoNombreCliente" name="SegundoNombreCliente" class="form-control" required>
+                                 <label for="SegundoNombreCliente">Segundo Nombre</label>
+                             </div>
+                           </div>
+                           <div class="col-4">
+                             <!-- Material input text -->
+                             <div class="md-form">
+                                 <i class="prefix grey-text"></i>
+                                 <input type="text" id="TercerNombreCliente" name="TercerNombreCliente" class="form-control">
+                                 <label for="TercerNombreCliente">Tercer Nombre</label>
+                             </div>
+                           </div>
                          </div>
 
-                         <!-- Material input text -->
-                         <div class="md-form">
-                             <i class="fa fa-user prefix grey-text"></i>
-                             <input type="text" id="ApellidoCliente" name="ApellidoCliente" class="form-control" required>
-                             <label for="ApellidoCliente">Apellidos</label>
+                         <div class="row">
+                           <div class="col-6">
+                             <!-- Material input text -->
+                             <div class="md-form">
+                                 <i class="fa fa-user prefix grey-text"></i>
+                                 <input type="text" id="PrimerApellidoCliente" name="PrimerApellidoCliente" class="form-control" required>
+                                 <label for="PrimerApellidoCliente">Primer Apellido</label>
+                             </div>
+                           </div>
+                           <div class="col-6">
+                             <!-- Material input text -->
+                             <div class="md-form">
+                                 <i class="prefix grey-text"></i>
+                                 <input type="text" id="SegundoApellidoCliente" name="SegundoApellidoCliente" class="form-control" required>
+                                 <label for="SegundoApellidoCliente">Segundo Apellido</label>
+                             </div>
+                           </div>
                          </div>
 
                          <!-- Material input text -->
                          <div class="md-form">
                              <i class="fa fa-address-card prefix grey-text"></i>
-                             <input type="text" id="DireccionCliente" name="DireccionCliente" class="form-control" required>
+                             <input type="text" id="DireccionCliente" name="DireccionCliente" class="form-control">
                              <label for="DireccionCliente">Dirección</label>
                          </div>
 
@@ -165,6 +197,13 @@
 
                         <!-- Material input text -->
                         <div class="md-form">
+                            <i class="fa fa-suitcase prefix grey-text"></i>
+                            <input type="text" id="EmpresaCliente" name="EmpresaCliente" class="form-control">
+                            <label for="EmpresaCliente">Empresa</label>
+                        </div>
+
+                        <!-- Material input text -->
+                        <div class="md-form">
                            <i class="fa fa-adjust prefix grey-text"></i>
                            <input type="email" id="GiroCliente" name="GiroCliente" class="form-control">
                            <label for="GiroCliente">Giro</label>
@@ -175,6 +214,38 @@
                            <i class="fa fa-envelope prefix grey-text"></i>
                            <input type="email" id="CorreoCliente" name="CorreoCliente" class="form-control">
                            <label for="CorreoCliente">Correo</label>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-6">
+                            <!--Dropdown primary-->
+                            <div class="dropdown text-center">
+                              <!--Trigger-->
+                              <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estado Civil</button>
+                              <!--Menu-->
+                              <div class="dropdown-menu"  style="width: 100%;">
+                                  <a class="dropdown-item" href="#">SOLTERO/A</a>
+                                  <a class="dropdown-item" href="#">CASADO/A</a>
+                                  <a class="dropdown-item" href="#">ACOMPAÑADO/A</a>
+                                  <a class="dropdown-item" href="#">DIVORSIADO/A</a>
+                                  <a class="dropdown-item" href="#">VIUDO/A</a>
+                              </div>
+                            </div>
+                             <!--/Dropdown primary-->
+                          </div>
+                          <div class="col-6">
+                            <!--Dropdown primary-->
+                            <div class="dropdown text-center">
+                              <!--Trigger-->
+                              <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo de Cliente</button>
+                              <!--Menu-->
+                              <div class="dropdown-menu"  style="width: 100%;">
+                                  <a class="dropdown-item" href="#">COMUN</a>
+                                  <a class="dropdown-item" href="#">PREFERENTE</a>
+                              </div>
+                            </div>
+                             <!--/Dropdown primary-->
+                          </div>
                         </div>
 
                          <div class="text-center mt-4">
@@ -188,26 +259,58 @@
                 <div class="tab-pane fade" id="panel7" role="tabpanel">
                    <!-- Material form contact -->
                    <form>
-                       <p class="h4 text-center mb-4">Modificar Cliente</p>
+                       <p class="h4 text-center mb-4">Modifica Información Cliente</p>
 
-                       <!-- Material input text -->
-                       <div class="md-form">
-                           <i class="fa fa-user prefix grey-text"></i>
-                           <input type="text" id="NombreCliente" name="NombreCliente" class="form-control" required>
-                           <label for="NombreCliente">Nombres</label>
+                       <div class="row">
+                         <div class="col-4">
+                           <!-- Material input text -->
+                           <div class="md-form">
+                               <i class="fa fa-user prefix grey-text"></i>
+                               <input type="text" id="PrimerNombreCliente" name="PrimerNombreCliente" class="form-control" required>
+                               <label for="PrimerNombreCliente">Primer Nombre</label>
+                           </div>
+                         </div>
+                         <div class="col-4">
+                           <!-- Material input text -->
+                           <div class="md-form">
+                               <i class="prefix grey-text"></i>
+                               <input type="text" id="SegundoNombreCliente" name="SegundoNombreCliente" class="form-control" required>
+                               <label for="SegundoNombreCliente">Segundo Nombre</label>
+                           </div>
+                         </div>
+                         <div class="col-4">
+                           <!-- Material input text -->
+                           <div class="md-form">
+                               <i class="prefix grey-text"></i>
+                               <input type="text" id="TercerNombreCliente" name="TercerNombreCliente" class="form-control">
+                               <label for="TercerNombreCliente">Tercer Nombre</label>
+                           </div>
+                         </div>
                        </div>
 
-                       <!-- Material input text -->
-                       <div class="md-form">
-                           <i class="fa fa-user prefix grey-text"></i>
-                           <input type="text" id="ApellidoCliente" name="ApellidoCliente" class="form-control" required>
-                           <label for="ApellidoCliente">Apellidos</label>
+                       <div class="row">
+                         <div class="col-6">
+                           <!-- Material input text -->
+                           <div class="md-form">
+                               <i class="fa fa-user prefix grey-text"></i>
+                               <input type="text" id="PrimerApellidoCliente" name="PrimerApellidoCliente" class="form-control" required>
+                               <label for="PrimerApellidoCliente">Primer Apellido</label>
+                           </div>
+                         </div>
+                         <div class="col-6">
+                           <!-- Material input text -->
+                           <div class="md-form">
+                               <i class="prefix grey-text"></i>
+                               <input type="text" id="SegundoApellidoCliente" name="SegundoApellidoCliente" class="form-control" required>
+                               <label for="SegundoApellidoCliente">Segundo Apellido</label>
+                           </div>
+                         </div>
                        </div>
 
                        <!-- Material input text -->
                        <div class="md-form">
                            <i class="fa fa-address-card prefix grey-text"></i>
-                           <input type="text" id="DireccionCliente" name="DireccionCliente" class="form-control" required>
+                           <input type="text" id="DireccionCliente" name="DireccionCliente" class="form-control">
                            <label for="DireccionCliente">Dirección</label>
                        </div>
 
@@ -241,16 +344,55 @@
 
                       <!-- Material input text -->
                       <div class="md-form">
-                        <i class="fa fa-adjust prefix grey-text"></i>
-                        <input type="email" id="GiroCliente" name="GiroCliente" class="form-control">
-                        <label for="GiroCliente">Giro</label>
+                          <i class="fa fa-suitcase prefix grey-text"></i>
+                          <input type="text" id="EmpresaCliente" name="EmpresaCliente" class="form-control">
+                          <label for="EmpresaCliente">Empresa</label>
                       </div>
 
                       <!-- Material input text -->
                       <div class="md-form">
-                        <i class="fa fa-envelope prefix grey-text"></i>
-                        <input type="email" id="CorreoCliente" name="CorreoCliente" class="form-control">
-                        <label for="CorreoCliente">Correo</label>
+                         <i class="fa fa-adjust prefix grey-text"></i>
+                         <input type="email" id="GiroCliente" name="GiroCliente" class="form-control">
+                         <label for="GiroCliente">Giro</label>
+                      </div>
+
+                      <!-- Material input text -->
+                      <div class="md-form">
+                         <i class="fa fa-envelope prefix grey-text"></i>
+                         <input type="email" id="CorreoCliente" name="CorreoCliente" class="form-control">
+                         <label for="CorreoCliente">Correo</label>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <!--Dropdown primary-->
+                          <div class="dropdown text-center">
+                            <!--Trigger-->
+                            <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estado Civil</button>
+                            <!--Menu-->
+                            <div class="dropdown-menu"  style="width: 100%;">
+                                <a class="dropdown-item" href="#">SOLTERO/A</a>
+                                <a class="dropdown-item" href="#">CASADO/A</a>
+                                <a class="dropdown-item" href="#">ACOMPAÑADO/A</a>
+                                <a class="dropdown-item" href="#">DIVORSIADO/A</a>
+                                <a class="dropdown-item" href="#">VIUDO/A</a>
+                            </div>
+                          </div>
+                           <!--/Dropdown primary-->
+                        </div>
+                        <div class="col-6">
+                          <!--Dropdown primary-->
+                          <div class="dropdown text-center">
+                            <!--Trigger-->
+                            <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo de Cliente</button>
+                            <!--Menu-->
+                            <div class="dropdown-menu"  style="width: 100%;">
+                                <a class="dropdown-item" href="#">COMUN</a>
+                                <a class="dropdown-item" href="#">PREFERENTE</a>
+                            </div>
+                          </div>
+                           <!--/Dropdown primary-->
+                        </div>
                       </div>
 
                        <div class="text-center mt-4">

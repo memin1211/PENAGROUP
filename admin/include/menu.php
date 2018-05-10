@@ -14,10 +14,10 @@
         <ul id="slide-out" class="side-nav fixed  custom-scrollbar info-color">
             <li>
                 <div class="logo-wrapper info-color">
-                    <a href="index.php?sucursal=<?php echo $Sucursal ?>" class="nav-link"><h2 class="img-fluid flex-center">MODULOS</h2></a>
+                    <a href="index.php?sucursal=<?php echo $Sucursal ?>" class="nav-link"><img src="../../assets/img/logo_modulo.png" style="width: 100%;"/></a>
                 </div>
             </li>
-            <li>
+            <li style="margin-top: 35%;">
                 <ul class="collapsible collapsible-accordion">
                   <?php
                   while ($a=$resultado1->fetch_assoc()) {
