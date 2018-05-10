@@ -26,6 +26,7 @@
     <!-- Personal-->
     <link href="assets/css/main.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114067464-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -34,7 +35,7 @@
 
   gtag('config', 'UA-114067464-1');
 </script>
-
+-->
 </head>
 <body>
   <div class="row col-lg-12">

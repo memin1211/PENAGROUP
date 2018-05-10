@@ -52,6 +52,7 @@
       color: white;
      }
     </style>
+    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114067464-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -60,6 +61,7 @@
 
       gtag('config', 'UA-114067464-1');
     </script>
+  -->
 </head>
 <body>
    <?php

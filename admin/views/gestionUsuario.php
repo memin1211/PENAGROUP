@@ -249,6 +249,7 @@
                      <!-- Material form contact -->
                </div>
                 <!--/.Panel 2-->
+                
                 <!--Panel 3-->
                 <div class="tab-pane fade" id="panel7" role="tabpanel">
                   <!-- Material form contact -->

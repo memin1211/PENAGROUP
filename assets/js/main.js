@@ -1,4 +1,3 @@
-
 jQuery(document).on('submit','#formLg',function(event){
             event.preventDefault();
             jQuery.ajax({
