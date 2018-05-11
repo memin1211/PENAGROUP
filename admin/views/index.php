@@ -39,7 +39,7 @@
     }
 
     .modulos{
-     width: 50%;
+     width: 75%;
      display: block;
      margin-left: auto;
      margin-right: auto;
@@ -94,11 +94,11 @@
            <?php
            if ($Estado[0]=='A') {
              ?>
-             <a href="gestion.php?modulo=M1&sucursal=<?php echo $Sucursal ?>"><img src="../../assets/img/admin/Mod_Administracion.png" alt="Modulo de Administracion" title="ADMINISTRACIÓN" class="modulos"></i></a>
+             <a href="gestion.php?modulo=M1&sucursal=<?php echo $Sucursal ?>"><img src="../../assets/img/admin/Modulo_Administracion.png" alt="Modulo de Administracion" title="ADMINISTRACIÓN" class="modulos"></i></a>
              <?php
            }else {
              ?>
-             <img src="../../assets/img/admin/Mod_Administracion.png" alt="Modulo de Administracion" title="ADMINISTRACIÓN" class="modulos"></i>
+             <img src="../../assets/img/admin/Modulo_Administracion.png" alt="Modulo de Administracion" title="ADMINISTRACIÓN" class="modulos"></i>
              <?php
            }
            ?>
@@ -107,11 +107,11 @@
            <?php
            if ($Estado[1]=='A') {
              ?>
-             <a href="gestion.php?modulo=M2&sucursal=<?php echo $Sucursal ?>"><img src="../../assets/img/admin/Mod_Venta.png" alt="Modulo de Ventas" title="PUNTO DE VENTA" class="modulos"></a>
+             <a href="gestion.php?modulo=M2&sucursal=<?php echo $Sucursal ?>"><img src="../../assets/img/admin/Punto_de_Venta.png" alt="Modulo de Ventas" title="PUNTO DE VENTA" class="modulos"></a>
              <?php
            }else {
              ?>
-             <img src="../../assets/img/admin/Mod_Venta.png" alt="Modulo de Ventas" title="PUNTO DE VENTA" class="modulos">
+             <img src="../../assets/img/admin/Punto_de_Venta.png" alt="Modulo de Ventas" title="PUNTO DE VENTA" class="modulos">
              <?php
            }
            ?>
@@ -120,11 +120,11 @@
            <?php
            if ($Estado[2]=='A') {
              ?>
-             <a href="gestion.php?modulo=M3&sucursal=<?php echo $Sucursal ?>"><img src="../../assets/img/admin/Mod_Inventario.png" alt="Modulo de Inventario" title="INVENTARIO" class="modulos"></a>
+             <a href="gestion.php?modulo=M3&sucursal=<?php echo $Sucursal ?>"><img src="../../assets/img/admin/Modulo_Inventario.png" alt="Modulo de Inventario" title="INVENTARIO" class="modulos"></a>
              <?php
            }else {
              ?>
-             <img src="../../assets/img/admin/Mod_Inventario.png" alt="Modulo de Inventario" title="INVENTARIO" class="modulos">
+             <img src="../../assets/img/admin/Modulo_Inventario.png" alt="Modulo de Inventario" title="INVENTARIO" class="modulos">
              <?php
            }
            ?>
@@ -133,17 +133,17 @@
            <?php
            if ($Estado[3]=='A') {
              ?>
-             <a href="gestion.php?modulo=M4&sucursal=<?php echo $Sucursal ?>"><img src="../../assets/img/admin/Mod_Contabilidad.png" alt="Modulo de Contabilidad" title="CONTABILIDAD" class="modulos"></a>
+             <a href="gestion.php?modulo=M4&sucursal=<?php echo $Sucursal ?>"><img src="../../assets/img/admin/Modulo_Contabilidad.png" alt="Modulo de Contabilidad" title="CONTABILIDAD" class="modulos"></a>
              <?php
            }else {
              ?>
-             <img src="../../assets/img/admin/Mod_Contabilidad.png" alt="Modulo de Contabilidad" title="CONTABILIDAD" class="modulos">
+             <img src="../../assets/img/admin/Modulo_Contabilidad.png" alt="Modulo de Contabilidad" title="CONTABILIDAD" class="modulos">
              <?php
            }
            ?>
        </div>
        <div  class="col-sm-2 col-md-2 col-lg-2">
-          <a href="../index.php"><img src="../../assets/img/admin/Salir.png" alt="Modulo de Inventario" title="CAMBIAR SUCURSAL" class="modulos"></a>
+          <a href="../index.php"><img src="../../assets/img/admin/Cambir_Sucursal.png" alt="Modulo de Inventario" title="CAMBIAR SUCURSAL" class="modulos"></a>
        </div>
        <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
     </div>

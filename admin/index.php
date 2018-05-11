@@ -60,13 +60,11 @@
     <div class="row m1">
       <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-        <a href="views/index.php?sucursal=SANTA_MARIA"><img src="../assets/img/Sucursal.png" alt="Santa Maria" title="SANTA MARIA" class="sucursal">
-        <font color="#027abe" style="font-size:25px; margin-left:35px;"><b>SANTA MARIA</b></font>
+        <a href="views/index.php?sucursal=SANTA_MARIA"><img src="../assets/img/Sucursal_Santa_Maria.png" alt="Santa Maria" title="SANTA MARIA" class="sucursal">
      </a>
      </div>
       <div  class="col-sm-3 col-md-3 col-lg-3">
-        <a href="views/index.php?sucursal=SAGRADA_FAMILIA"><img src="../assets/img/Sucursal.png" alt="Sagrada Familia" title="SAGRADA FAMILIA" class="sucursal">
-        <font color="#027abe" style="font-size:25px; margin-left:20px;"><b>SAGRADA FAMILIA</b></font>
+        <a href="views/index.php?sucursal=SAGRADA_FAMILIA"><img src="../assets/img/Sucursal_Sagrada_Familia.png" alt="Sagrada Familia" title="SAGRADA FAMILIA" class="sucursal">
      </a>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-3"></div>
