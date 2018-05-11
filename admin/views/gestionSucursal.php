@@ -97,7 +97,7 @@
                 <div class="tab-pane fade" id="panel6" role="tabpanel">
                     <!-- Material form contact -->
                      <form>
-                         <p class="h4 text-center mb-4">Nueva Sucursal</p>
+                         <p class="h4 text-center mb-4">Registrar Nueva Sucursal</p>
 
                          <!-- Material input text -->
                          <div class="md-form">
@@ -128,12 +128,12 @@
                      <!-- Material form contact -->
                </div>
                 <!--/.Panel 2-->
-                
+
                 <!--Panel 3-->
                 <div class="tab-pane fade" id="panel7" role="tabpanel">
                    <!-- Material form contact -->
                     <form>
-                        <p class="h4 text-center mb-4">Modificar Sucursal</p>
+                        <p class="h4 text-center mb-4">Modificar Información Sucursal</p>
 
                         <!-- Material input text -->
                         <div class="md-form">
