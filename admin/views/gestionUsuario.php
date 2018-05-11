@@ -22,6 +22,7 @@
       <link href="../../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
       <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
       <link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
+      <link rel="icon" type="image/ico" href="../../assets/img/icono.ico" />
       <style media="screen">
         a{
          color: white;
@@ -249,7 +250,7 @@
                      <!-- Material form contact -->
                </div>
                 <!--/.Panel 2-->
-                
+
                 <!--Panel 3-->
                 <div class="tab-pane fade" id="panel7" role="tabpanel">
                   <!-- Material form contact -->
