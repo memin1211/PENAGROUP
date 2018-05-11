@@ -62,10 +62,10 @@
                                   <tr>
                                       <th>CODIGO</th>
                                       <th>NOMBRE</th>
-                                      <th>NIT</th>
-                                      <th>NRC</th>
-                                      <th>TELEFONO</th>
-                                      <th>TIPO SERVICIO</th>
+                                      <th>DIRECCIÓN</th>
+                                      <th>TELÉFONO FIJO</th>
+                                      <th>CÉLULAR</th>
+                                      <th>CORREO</th>
                                       <th>ESTADO</th>
                                   </tr>
                               </thead>
@@ -75,29 +75,29 @@
                               <tbody>
                                   <tr>
                                       <th scope="row">1</th>
-                                      <td>TIGO EL SALVADOR</td>
-                                      <td>1234-123456-123-1</td>
-                                      <td>12345-6</td>
-                                      <td>22222222</td>
-                                      <td>SERVICIO FIJO</td>
+                                      <td>JOMI S.A DE C.V</td>
+                                      <td>MEJICANOS, SAN SALVADOR.</td>
+                                      <td>2575-2565</td>
+                                      <td></td>
+                                      <td></td>
                                       <td>ACTIVO</td>
                                   </tr>
                                   <tr>
                                     <th scope="row">2</th>
                                     <td>BIOKEMIKAL S.A DE C.V</td>
-                                    <td>1234-123456-123-2</td>
-                                    <td>12345-7</td>
-                                    <td>22225555</td>
-                                    <td>SERVICIO VARIABLE</td>
+                                    <td>COLONIA MEDICA, SAN SALVADOR.</td>
+                                    <td>2586-6585</td>
+                                    <td>7598-6654</td>
+                                    <td>VENTAS@BIOKEMIKAL.COM</td>
                                     <td>ACTIVO</td>
                                   </tr>
                                   <tr>
                                     <th scope="row">3</th>
-                                    <td>CAESS S.A DE C.V</td>
-                                    <td>1234-123456-123-3</td>
-                                    <td>12345-8</td>
-                                    <td>22553920</td>
-                                    <td>SERVICIO FIJO</td>
+                                    <td>ROBLES S.A DE C.V</td>
+                                    <td>SAN SALVADOR, SAN SALVADOR.</td>
+                                    <td>2235-5575</td>
+                                    <td></td>
+                                    <td>VENTAS@ROBLES.COM</td>
                                     <td>ACTIVO</td>
                                   </tr>
                               </tbody>
@@ -113,7 +113,7 @@
                 <div class="tab-pane fade" id="panel6" role="tabpanel">
                     <!-- Material form contact -->
                      <form>
-                         <p class="h4 text-center mb-4">Nuevo Proveedor</p>
+                         <p class="h4 text-center mb-4">Registrar Nuevo Proveedor</p>
 
                          <!-- Material input text -->
                          <div class="md-form">
@@ -130,28 +130,20 @@
                          </div>
 
                          <div class="row">
-                            <div class="col-4">
+                            <div class="col-6">
                                <!-- Material input text -->
                                <div class="md-form">
                                    <i class="fa fa-phone prefix grey-text"></i>
-                                   <input type="text" id="TelefonoProveedor" name="TelefonoProveedor" class="form-control">
-                                   <label for="TelefonoProveedor">Teléfono</label>
+                                   <input type="text" id="TelefonoProveedor" name="TelefonoProveedor" class="form-control" required>
+                                   <label for="TelefonoProveedor">Teléfono Fijo</label>
                                </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-6">
                                <!-- Material input text -->
                                <div class="md-form">
-                                   <i class="fa fa-address-card-o prefix grey-text"></i>
-                                   <input type="text" id="NitProveedor" name="NitProveedor" class="form-control">
-                                   <label for="NitProveedor">NIT</label>
-                               </div>
-                            </div>
-                            <div class="col-4">
-                               <!-- Material input text -->
-                               <div class="md-form">
-                                   <i class="fa fa-indent prefix grey-text"></i>
-                                   <input type="text" id="NrcProveedor" name="NrcProveedor" class="form-control">
-                                   <label for="NrcProveedor">NRC</label>
+                                   <i class="fa fa-mobile-phone prefix grey-text"></i>
+                                   <input type="text" id="CelularProveedor" name="CelularProveedor" class="form-control">
+                                   <label for="CelularProveedor">Célular</label>
                                </div>
                             </div>
                         </div>
@@ -159,30 +151,10 @@
 
                         <!-- Material input text -->
                         <div class="md-form">
-                           <i class="fa fa-adjust prefix grey-text"></i>
-                           <input type="text" id="GiroProveedor" name="GiroProveedor" class="form-control">
-                           <label for="GiroProveedor">Giro</label>
-                        </div>
-
-                        <!-- Material input text -->
-                        <div class="md-form">
                            <i class="fa fa-envelope prefix grey-text"></i>
                            <input type="email" id="CorreoUsuario" name="CorreoUsuario" class="form-control">
                            <label for="CorreoUsuario">Correo</label>
                         </div>
-
-                        <!--Dropdown primary-->
-                        <div class="dropdown text-center">
-                          <!--Trigger-->
-                          <button class="btn btn-info dropdown-toggle"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo Servicio</button>
-                          <!--Menu-->
-                          <div class="dropdown-menu"  style="width: 100%;">
-                              <a class="dropdown-item" href="#">SERVICIO FIJO</a>
-                              <a class="dropdown-item" href="#">SERVICIO VARIABLE</a>
-                              <a class="dropdown-item" href="#">OTRO</a>
-                          </div>
-                        </div>
-                        <!--/Dropdown primary-->
 
                          <div class="text-center mt-4">
                              <button class="btn btn-outline-info" type="submit">Crear<i class="fa fa-paper-plane-o ml-2"></i></button>
@@ -195,7 +167,7 @@
                 <div class="tab-pane fade" id="panel7" role="tabpanel">
                    <!-- Material form contact -->
                    <form>
-                       <p class="h4 text-center mb-4">Modificar Proveedor</p>
+                       <p class="h4 text-center mb-4">Modificar Información Proveedor</p>
 
                        <!-- Material input text -->
                        <div class="md-form">
@@ -204,7 +176,7 @@
                            <label for="NombreProveedor">Nombre Proveedor</label>
                        </div>
 
-                       <!-- Material input email -->
+                       <!-- Material input text -->
                        <div class="md-form">
                            <i class="fa fa-address-card prefix grey-text"></i>
                            <input type="text" id="DireccionProveedor" name="DireccionProveedor" class="form-control">
@@ -212,59 +184,31 @@
                        </div>
 
                        <div class="row">
-                          <div class="col-4">
-                             <!-- Material input email -->
+                          <div class="col-6">
+                             <!-- Material input text -->
                              <div class="md-form">
-                                 <i class="fa fa-envelope prefix grey-text"></i>
-                                 <input type="text" id="TelefonoProveedor" name="TelefonoProveedor" class="form-control">
-                                 <label for="TelefonoProveedor">Teléfono</label>
+                                 <i class="fa fa-phone prefix grey-text"></i>
+                                 <input type="text" id="TelefonoProveedor" name="TelefonoProveedor" class="form-control" required>
+                                 <label for="TelefonoProveedor">Teléfono Fijo</label>
                              </div>
                           </div>
-                          <div class="col-4">
-                             <!-- Material input email -->
+                          <div class="col-6">
+                             <!-- Material input text -->
                              <div class="md-form">
-                                 <i class="fa fa-address-card-o prefix grey-text"></i>
-                                 <input type="text" id="NitProveedor" name="NitProveedor" class="form-control">
-                                 <label for="NitProveedor">NIT</label>
-                             </div>
-                          </div>
-                          <div class="col-4">
-                             <!-- Material input email -->
-                             <div class="md-form">
-                                 <i class="fa fa-indent prefix grey-text"></i>
-                                 <input type="text" id="NrcProveedor" name="NrcProveedor" class="form-control">
-                                 <label for="NrcProveedor">NRC</label>
+                                 <i class="fa fa-mobile-phone prefix grey-text"></i>
+                                 <input type="text" id="CelularProveedor" name="CelularProveedor" class="form-control">
+                                 <label for="CelularProveedor">Célular</label>
                              </div>
                           </div>
                       </div>
                       <br>
 
-                      <!-- Material input email -->
+                      <!-- Material input text -->
                       <div class="md-form">
-                        <i class="fa fa-adjust prefix grey-text"></i>
-                        <input type="text" id="GiroProveedor" name="GiroProveedor" class="form-control">
-                        <label for="GiroProveedor">Giro</label>
+                         <i class="fa fa-envelope prefix grey-text"></i>
+                         <input type="email" id="CorreoUsuario" name="CorreoUsuario" class="form-control">
+                         <label for="CorreoUsuario">Correo</label>
                       </div>
-
-                      <!-- Material input email -->
-                      <div class="md-form">
-                        <i class="fa fa-envelope prefix grey-text"></i>
-                        <input type="email" id="CorreoUsuario" name="CorreoUsuario" class="form-control">
-                        <label for="CorreoUsuario">Correo</label>
-                      </div>
-
-                      <!--Dropdown primary-->
-                      <div class="dropdown text-center">
-                       <!--Trigger-->
-                       <button class="btn btn-info dropdown-toggle"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo Servicio</button>
-                       <!--Menu-->
-                       <div class="dropdown-menu"  style="width: 100%;">
-                           <a class="dropdown-item" href="#">SERVICIO FIJO</a>
-                           <a class="dropdown-item" href="#">SERVICIO VARIABLE</a>
-                           <a class="dropdown-item" href="#">OTRO</a>
-                       </div>
-                      </div>
-                      <!--/Dropdown primary-->
 
                        <div class="text-center mt-4">
                            <button class="btn btn-outline-info" type="submit">Modificar<i class="fa fa-refresh ml-2"></i></button>

@@ -63,6 +63,10 @@
                                       <th>CODIGO</th>
                                       <th>LABORATORIO</th>
                                       <th>ABREVIATURA</th>
+                                      <th>DIRECCIÓN</th>
+                                      <th>TÉLEFONO FIJO</th>
+                                      <th>CÉLULAR</th>
+                                      <th>CORREO</th>
                                       <th>ESTADO</th>
                                   </tr>
                               </thead>
@@ -74,18 +78,30 @@
                                       <th scope="row">1</th>
                                       <td> LABORATORIOS SAIMED</td>
                                       <td>SAIMED</td>
+                                      <td>SAN SALVADOR, SAN SALVADOR.</td>
+                                      <td>2225-6352</td>
+                                      <td></td>
+                                      <td>RECEPCION@SAIMED.COM</td>
                                       <td>ACTIVO</td>
                                   </tr>
                                   <tr>
                                     <th scope="row">2</th>
                                     <td>LABORATORIOS PAIL</td>
                                     <td>PAIL</td>
+                                    <td>SAN SALVADOR, SAN SALVADOR.</td>
+                                    <td>2225-6352</td>
+                                    <td></td>
+                                    <td>RECEPCION@PAIL.COM</td>
                                     <td>ACTIVO</td>
                                   </tr>
                                   <tr>
                                     <th scope="row">3</th>
-                                    <td>LABORATORIOS BIOKEMIKAL</td>
-                                    <td>BIOKEMIKAL</td>
+                                    <td>LABORATORIOS GENOMMA LAB</td>
+                                    <td>GENOMMA LAB</td>
+                                    <td>SAN SALVADOR, SAN SALVADOR.</td>
+                                    <td>2225-6352</td>
+                                    <td></td>
+                                    <td>RECEPCION@GENOMMALAB.COM</td>
                                     <td>ACTIVO</td>
                                   </tr>
                               </tbody>
@@ -100,32 +116,57 @@
                 <!--Panel 2-->
                 <div class="tab-pane fade" id="panel6" role="tabpanel">
                     <!-- Material form contact -->
-                     <form>
-                         <p class="h4 text-center mb-4">Nuevo Laboratorio</p>
+                    <form>
+                        <p class="h4 text-center mb-4">Registrar Nuevo Laboratorio</p>
 
-                         <!-- Material input text -->
-                         <div class="md-form">
-                             <i class="fa fa-user prefix grey-text"></i>
-                             <input type="text" id="NombreLaboratorio" name="NombreLaboratorio" class="form-control" required>
-                             <label for="NombreLaboratorio">Nombre Laboratorio</label>
-                         </div>
+                        <!-- Material input text -->
+                        <div class="md-form">
+                            <i class="fa fa-user prefix grey-text"></i>
+                            <input type="text" id="NombreProveedor" name="NombreProveedor" class="form-control" required>
+                            <label for="NombreProveedor">Nombre Laboratorio</label>
+                        </div>
 
-                         <!-- Material input text -->
-                         <div class="md-form">
-                             <i class="fa fa-address-card prefix grey-text"></i>
-                             <input type="text" id="DireccionLaboratorio" name="DireccionLaboratorio" class="form-control">
-                             <label for="DireccionLaboratorio">Dirección</label>
-                         </div>
+                        <!-- Material input text -->
+                        <div class="md-form">
+                            <i class="fa fa-address-card prefix grey-text"></i>
+                            <input type="text" id="DireccionProveedor" name="DireccionProveedor" class="form-control">
+                            <label for="DireccionProveedor">Dirección</label>
+                        </div>
 
-                         <div class="row">
-                            <div class="col-4">
-                               <!-- Material input text -->
-                               <div class="md-form">
-                                   <i class="fa fa-phone prefix grey-text"></i>
-                                   <input type="text" id="TelefonoLaboratorio" name="TelefonoLaboratorio" class="form-control">
-                                   <label for="TelefonoLaboratorio">Teléfono</label>
-                               </div>
-                            </div>
+                        <div class="row">
+                           <div class="col-4">
+                              <!-- Material input text -->
+                              <div class="md-form">
+                                  <i class="fa fa-phone prefix grey-text"></i>
+                                  <input type="text" id="TelefonoProveedor" name="TelefonoProveedor" class="form-control" required>
+                                  <label for="TelefonoProveedor">Teléfono Fijo</label>
+                              </div>
+                           </div>
+                           <div class="col-4">
+                              <!-- Material input text -->
+                              <div class="md-form">
+                                  <i class="fa fa-mobile-phone prefix grey-text"></i>
+                                  <input type="text" id="CelularProveedor" name="CelularProveedor" class="form-control">
+                                  <label for="CelularProveedor">Célular</label>
+                              </div>
+                           </div>
+                           <div class="col-4">
+                              <!-- Material input text -->
+                              <div class="md-form">
+                                  <i class="fa fa-trademark prefix grey-text"></i>
+                                  <input type="text" id="AbreviaturaProveedor" name="AbreviaturaProveedor" class="form-control" required>
+                                  <label for="AbreviaturaProveedor">Abreviatura</label>
+                              </div>
+                           </div>
+                       </div>
+                       <br>
+
+                       <!-- Material input text -->
+                       <div class="md-form">
+                          <i class="fa fa-envelope prefix grey-text"></i>
+                          <input type="email" id="CorreoUsuario" name="CorreoUsuario" class="form-control">
+                          <label for="CorreoUsuario">Correo</label>
+                       </div>
 
                          <div class="text-center mt-4">
                              <button class="btn btn-outline-info" type="submit">Crear<i class="fa fa-paper-plane-o ml-2"></i></button>
@@ -138,16 +179,16 @@
                 <div class="tab-pane fade" id="panel7" role="tabpanel">
                    <!-- Material form contact -->
                    <form>
-                       <p class="h4 text-center mb-4">Modificar Laboratorio</p>
+                       <p class="h4 text-center mb-4">Modificar Información Laboratorio</p>
 
                        <!-- Material input text -->
                        <div class="md-form">
                            <i class="fa fa-user prefix grey-text"></i>
                            <input type="text" id="NombreProveedor" name="NombreProveedor" class="form-control" required>
-                           <label for="NombreProveedor">Nombre Proveedor</label>
+                           <label for="NombreProveedor">Nombre Laboratorio</label>
                        </div>
 
-                       <!-- Material input email -->
+                       <!-- Material input text -->
                        <div class="md-form">
                            <i class="fa fa-address-card prefix grey-text"></i>
                            <input type="text" id="DireccionProveedor" name="DireccionProveedor" class="form-control">
@@ -156,58 +197,38 @@
 
                        <div class="row">
                           <div class="col-4">
-                             <!-- Material input email -->
+                             <!-- Material input text -->
                              <div class="md-form">
-                                 <i class="fa fa-envelope prefix grey-text"></i>
-                                 <input type="text" id="TelefonoProveedor" name="TelefonoProveedor" class="form-control">
-                                 <label for="TelefonoProveedor">Teléfono</label>
+                                 <i class="fa fa-phone prefix grey-text"></i>
+                                 <input type="text" id="TelefonoProveedor" name="TelefonoProveedor" class="form-control" required>
+                                 <label for="TelefonoProveedor">Teléfono Fijo</label>
                              </div>
                           </div>
                           <div class="col-4">
-                             <!-- Material input email -->
+                             <!-- Material input text -->
                              <div class="md-form">
-                                 <i class="fa fa-address-card-o prefix grey-text"></i>
-                                 <input type="text" id="NitProveedor" name="NitProveedor" class="form-control">
-                                 <label for="NitProveedor">NIT</label>
+                                 <i class="fa fa-mobile-phone prefix grey-text"></i>
+                                 <input type="text" id="CelularProveedor" name="CelularProveedor" class="form-control">
+                                 <label for="CelularProveedor">Célular</label>
                              </div>
                           </div>
                           <div class="col-4">
-                             <!-- Material input email -->
+                             <!-- Material input text -->
                              <div class="md-form">
-                                 <i class="fa fa-indent prefix grey-text"></i>
-                                 <input type="text" id="NrcProveedor" name="NrcProveedor" class="form-control">
-                                 <label for="NrcProveedor">NRC</label>
+                                 <i class="fa fa-trademark prefix grey-text"></i>
+                                 <input type="text" id="AbreviaturaProveedor" name="AbreviaturaProveedor" class="form-control" required>
+                                 <label for="AbreviaturaProveedor">Abreviatura</label>
                              </div>
                           </div>
                       </div>
                       <br>
 
-                      <!-- Material input email -->
+                      <!-- Material input text -->
                       <div class="md-form">
-                        <i class="fa fa-adjust prefix grey-text"></i>
-                        <input type="text" id="GiroProveedor" name="GiroProveedor" class="form-control">
-                        <label for="GiroProveedor">Giro</label>
+                         <i class="fa fa-envelope prefix grey-text"></i>
+                         <input type="email" id="CorreoUsuario" name="CorreoUsuario" class="form-control">
+                         <label for="CorreoUsuario">Correo</label>
                       </div>
-
-                      <!-- Material input email -->
-                      <div class="md-form">
-                        <i class="fa fa-envelope prefix grey-text"></i>
-                        <input type="email" id="CorreoUsuario" name="CorreoUsuario" class="form-control">
-                        <label for="CorreoUsuario">Correo</label>
-                      </div>
-
-                      <!--Dropdown primary-->
-                      <div class="dropdown text-center">
-                       <!--Trigger-->
-                       <button class="btn btn-info dropdown-toggle"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo Servicio</button>
-                       <!--Menu-->
-                       <div class="dropdown-menu"  style="width: 100%;">
-                           <a class="dropdown-item" href="#">SERVICIO FIJO</a>
-                           <a class="dropdown-item" href="#">SERVICIO VARIABLE</a>
-                           <a class="dropdown-item" href="#">OTRO</a>
-                       </div>
-                      </div>
-                      <!--/Dropdown primary-->
 
                        <div class="text-center mt-4">
                            <button class="btn btn-outline-info" type="submit">Modificar<i class="fa fa-refresh ml-2"></i></button>
