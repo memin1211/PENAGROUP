@@ -97,6 +97,25 @@
                                     <td>$ 125.75</td>
                                     <td>PENDIENTE</td>
                                   </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td>MARCOS ANTONIO CHEVES</td>
+                                      <td>CCF 201</td>
+                                      <td>1/05/2018</td>
+                                      <td>10/05/2018</td>
+                                      <td>$ 520.00</td>
+                                      <td>PENDIENTE</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td>MARTA ALICIA DEL CARMEN</td>
+                                      <td>CCF 108</td>
+                                      <td>28/04/2018</td>
+                                      <td>15/04/2018</td>
+                                      <td>$ 75.00</td>
+                                      <td>CANCELADO</td>
+                                  </tr>
+
                               </tbody>
                               <!--Table body-->
                           </table>

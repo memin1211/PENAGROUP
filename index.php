@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width initial-scale=1'>
     <meta name='mobile-web-app-capable' content='yes'>
-    <link rel="icon" type="image/ico" href="assets/img/icono.ico" />
+    <link rel="icon" type="image/ico" href="assets/img/logo.png" />
     <title>.::PENAGROUP::.</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
