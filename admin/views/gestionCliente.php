@@ -100,6 +100,15 @@
                                     <td>25225445</td>
                                     <td>ACTIVO</td>
                                   </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>KRISNA MELISET</td>
+                                    <td>SANTA TECLA, SAN SALVADOR</td>
+                                    <td>1234-123456-125-7</td>
+                                    <td>12345-2</td>
+                                    <td>25225433</td>
+                                    <td>ACTIVO</td>
+                                  </tr>
                               </tbody>
                               <!--Table body-->
                           </table>
