@@ -22,7 +22,7 @@
       <link href="../../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
       <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
       <link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
-      <link rel="icon" type="image/ico" href="../../assets/img/icono.ico" />
+      <link rel="icon" type="image/ico" href="../../assets/img/logo.png" />
       <style media="screen">
         a{
          color: white;
@@ -219,33 +219,23 @@
 
                         <div class="row">
                           <div class="col-6">
-                            <!--Dropdown primary-->
-                            <div class="dropdown text-center">
-                              <!--Trigger-->
-                              <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estado Civil</button>
-                              <!--Menu-->
-                              <div class="dropdown-menu"  style="width: 100%;">
-                                  <a class="dropdown-item" href="#">SOLTERO/A</a>
-                                  <a class="dropdown-item" href="#">CASADO/A</a>
-                                  <a class="dropdown-item" href="#">ACOMPAÑADO/A</a>
-                                  <a class="dropdown-item" href="#">DIVORSIADO/A</a>
-                                  <a class="dropdown-item" href="#">VIUDO/A</a>
-                              </div>
-                            </div>
-                             <!--/Dropdown primary-->
+                            <select class="mdb-select colorful-select dropdown-info">
+                                <option value="" disabled selected>Seleccione</option>
+                                <option value="1">SOLTERO/A</option>
+                                <option value="2">CASADO/A</option>
+                                <option value="3">ACOMPAÑADO/A</option>
+                                <option value="4">DIVORSIADO/A</option>
+                                <option value="5">VIUDO/A</option>
+                            </select>
+                            <label>Estado Civil</label>
                           </div>
                           <div class="col-6">
-                            <!--Dropdown primary-->
-                            <div class="dropdown text-center">
-                              <!--Trigger-->
-                              <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo de Cliente</button>
-                              <!--Menu-->
-                              <div class="dropdown-menu"  style="width: 100%;">
-                                  <a class="dropdown-item" href="#">COMUN</a>
-                                  <a class="dropdown-item" href="#">PREFERENTE</a>
-                              </div>
-                            </div>
-                             <!--/Dropdown primary-->
+                            <select class="mdb-select colorful-select dropdown-info">
+                                <option value="" disabled selected>Seleccione</option>
+                                <option value="1">COMÚN</option>
+                                <option value="2">PREFERENTE</option>
+                            </select>
+                            <label>Tipo de Cliente</label>
                           </div>
                         </div>
 
@@ -260,7 +250,7 @@
                 <div class="tab-pane fade" id="panel7" role="tabpanel">
                    <!-- Material form contact -->
                    <form>
-                       <p class="h4 text-center mb-4">Modifica Información Cliente</p>
+                       <p class="h4 text-center mb-4">Modificar Información Cliente</p>
 
                        <div class="row">
                          <div class="col-4">
@@ -366,33 +356,23 @@
 
                       <div class="row">
                         <div class="col-6">
-                          <!--Dropdown primary-->
-                          <div class="dropdown text-center">
-                            <!--Trigger-->
-                            <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estado Civil</button>
-                            <!--Menu-->
-                            <div class="dropdown-menu"  style="width: 100%;">
-                                <a class="dropdown-item" href="#">SOLTERO/A</a>
-                                <a class="dropdown-item" href="#">CASADO/A</a>
-                                <a class="dropdown-item" href="#">ACOMPAÑADO/A</a>
-                                <a class="dropdown-item" href="#">DIVORSIADO/A</a>
-                                <a class="dropdown-item" href="#">VIUDO/A</a>
-                            </div>
-                          </div>
-                           <!--/Dropdown primary-->
+                          <select class="mdb-select colorful-select dropdown-info">
+                              <option value="" disabled selected>Seleccione</option>
+                              <option value="1">SOLTERO/A</option>
+                              <option value="2">CASADO/A</option>
+                              <option value="3">ACOMPAÑADO/A</option>
+                              <option value="4">DIVORSIADO/A</option>
+                              <option value="5">VIUDO/A</option>
+                          </select>
+                          <label>Estado Civil</label>
                         </div>
                         <div class="col-6">
-                          <!--Dropdown primary-->
-                          <div class="dropdown text-center">
-                            <!--Trigger-->
-                            <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo de Cliente</button>
-                            <!--Menu-->
-                            <div class="dropdown-menu"  style="width: 100%;">
-                                <a class="dropdown-item" href="#">COMUN</a>
-                                <a class="dropdown-item" href="#">PREFERENTE</a>
-                            </div>
-                          </div>
-                           <!--/Dropdown primary-->
+                          <select class="mdb-select colorful-select dropdown-info">
+                              <option value="" disabled selected>Seleccione</option>
+                              <option value="1">COMÚN</option>
+                              <option value="2">PREFERENTE</option>
+                          </select>
+                          <label>Tipo de Cliente</label>
                         </div>
                       </div>
 
@@ -406,5 +386,10 @@
             </div>
          </div>
       </div>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        $('.mdb-select').material_select();
+      });
+      </script>
    </body>
 </html>
