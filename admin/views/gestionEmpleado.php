@@ -53,6 +53,43 @@
 
                 <!--Panel 1-->
                 <div class="tab-pane fade in show active" id="panel5" role="tabpanel">
+                  <!--Pagination -->
+                    <nav aria-label="pagination example">
+                        <ul class="pagination pagination-circle pg-blue mb-0 pagination-sm">
+
+                            <!--First-->
+                            <li class="page-item disabled"><a class="page-link">Primer</a></li>
+
+                            <!--Arrow left-->
+                            <li class="page-item disabled">
+                                <a class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                            </li>
+
+                            <!--Numbers-->
+                            <li class="page-item active"><a class="page-link">1</a></li>
+                            <li class="page-item"><a class="page-link">2</a></li>
+                            <li class="page-item"><a class="page-link">3</a></li>
+                            <li class="page-item"><a class="page-link">4</a></li>
+                            <li class="page-item"><a class="page-link">5</a></li>
+
+                            <!--Arrow right-->
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Siguiente</span>
+                                </a>
+                            </li>
+
+                            <!--Last-->
+                            <li class="page-item"><a class="page-link">Último</a></li>
+
+                        </ul>
+                    </nav>
+                    <!--Fin Pagination -->
+                    <br>
                     <div class="card">
                       <div class="card-body">
                           <!--Table-->
@@ -222,38 +259,28 @@
 
                        <div class="row">
                          <div class="col-6">
-                           <!--Dropdown primary-->
-                           <div class="dropdown text-center">
-                             <!--Trigger-->
-                             <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estado Civil</button>
-                             <!--Menu-->
-                             <div class="dropdown-menu"  style="width: 100%;">
-                                 <a class="dropdown-item" href="#">SOLTERO/A</a>
-                                 <a class="dropdown-item" href="#">CASADO/A</a>
-                                 <a class="dropdown-item" href="#">ACOMPAÑADO/A</a>
-                                 <a class="dropdown-item" href="#">DIVORSIADO/A</a>
-                                 <a class="dropdown-item" href="#">VIUDO/A</a>
-                             </div>
-                           </div>
-                            <!--/Dropdown primary-->
+                           <select class="mdb-select colorful-select dropdown-info">
+                               <option value="" disabled selected>Seleccione</option>
+                               <option value="1">SOLTERO/A</option>
+                               <option value="2">CASADO/A</option>
+                               <option value="3">ACOMPAÑADO/A</option>
+                               <option value="4">DIVORSIADO/A</option>
+                               <option value="5">VIUDO/A</option>
+                           </select>
+                           <label>Estado Civil</label>
                          </div>
                          <div class="col-6">
-                           <!--Dropdown primary-->
-                           <div class="dropdown text-center">
-                             <!--Trigger-->
-                             <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Género</button>
-                             <!--Menu-->
-                             <div class="dropdown-menu"  style="width: 100%;">
-                                 <a class="dropdown-item" href="#">MASCULINO</a>
-                                 <a class="dropdown-item" href="#">FEMENINO</a>
-                             </div>
-                           </div>
-                            <!--/Dropdown primary-->
+                           <select class="mdb-select colorful-select dropdown-info">
+                               <option value="" disabled selected>Seleccione</option>
+                               <option value="1">FEMENINO</option>
+                               <option value="2">MASCULINO</option>
+                           </select>
+                           <label>Tipo de Cliente</label>
                          </div>
                        </div>
 
                         <div class="text-center mt-4">
-                            <button class="btn btn-outline-info" type="submit">Crear<i class="fa fa-paper-plane-o ml-2"></i></button>
+                            <button class="btn btn-outline-info" type="button">Crear<i class="fa fa-paper-plane-o ml-2"></i></button>
                         </div>
                     </form>
                      <!-- Material form contact -->
@@ -373,38 +400,28 @@
 
                       <div class="row">
                         <div class="col-6">
-                          <!--Dropdown primary-->
-                          <div class="dropdown text-center">
-                            <!--Trigger-->
-                            <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estado Civil</button>
-                            <!--Menu-->
-                            <div class="dropdown-menu"  style="width: 100%;">
-                                <a class="dropdown-item" href="#">SOLTERO/A</a>
-                                <a class="dropdown-item" href="#">CASADO/A</a>
-                                <a class="dropdown-item" href="#">ACOMPAÑADO/A</a>
-                                <a class="dropdown-item" href="#">DIVORSIADO/A</a>
-                                <a class="dropdown-item" href="#">VIUDO/A</a>
-                            </div>
-                          </div>
-                           <!--/Dropdown primary-->
+                          <select class="mdb-select colorful-select dropdown-info">
+                              <option value="" disabled selected>Seleccione</option>
+                              <option value="1">SOLTERO/A</option>
+                              <option value="2">CASADO/A</option>
+                              <option value="3">ACOMPAÑADO/A</option>
+                              <option value="4">DIVORSIADO/A</option>
+                              <option value="5">VIUDO/A</option>
+                          </select>
+                          <label>Estado Civil</label>
                         </div>
                         <div class="col-6">
-                          <!--Dropdown primary-->
-                          <div class="dropdown text-center">
-                            <!--Trigger-->
-                            <button class="btn btn-info dropdown-toggle colorful-select dropdown-primary"  style="width: 100%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Género</button>
-                            <!--Menu-->
-                            <div class="dropdown-menu"  style="width: 100%;">
-                                <a class="dropdown-item" href="#">MASCULINO</a>
-                                <a class="dropdown-item" href="#">FEMENINO</a>
-                            </div>
-                          </div>
-                           <!--/Dropdown primary-->
+                          <select class="mdb-select colorful-select dropdown-info">
+                              <option value="" disabled selected>Seleccione</option>
+                              <option value="1">FEMENINO</option>
+                              <option value="2">MASCULINO</option>
+                          </select>
+                          <label>Tipo de Cliente</label>
                         </div>
                       </div>
 
                        <div class="text-center mt-4">
-                           <button class="btn btn-outline-info" type="submit">Modificar<i class="fa fa-refresh ml-2"></i></button>
+                           <button class="btn btn-outline-info" type="button">Modificar<i class="fa fa-refresh ml-2"></i></button>
                        </div>
                    </form>
                    <!-- Material form contact -->
@@ -414,5 +431,10 @@
          </div>
       </div>
       <script type="text/javascript" src="../../assets/js/SelectorFecha.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        $('.mdb-select').material_select();
+      });
+      </script>
    </body>
 </html>

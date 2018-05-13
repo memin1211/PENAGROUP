@@ -39,10 +39,10 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs nav-justified blue-gradient" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#panel5" role="tab"><i class="fa fa-address-book" aria-hidden="true"></i>Créditos Emitidos</a>
+                    <a class="nav-link active" data-toggle="tab" href="#panel5" role="tab"><i class="fa fa-cubes" aria-hidden="true"></i>Ordenes de Compra</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#panel6" role="tab"><i class="fa fa-plus" aria-hidden="true"></i></i> Generar Cobro</a>
+                    <a class="nav-link" data-toggle="tab" href="#panel6" role="tab"><i class="fa fa-plus" aria-hidden="true"></i></i> Generar Orden de Compra</a>
                 </li>
             </ul>
             <!-- Tab panels -->
@@ -95,11 +95,11 @@
                               <thead class="special-color white-text">
                                   <tr>
                                       <th>CODIGO</th>
-                                      <th>CLIENTE</th>
-                                      <th>CORRELATIVO</th>
-                                      <th>FECHA EMISION</th>
-                                      <th>FECHA VENCIMIENTO</th>
-                                      <th>MONTO CREDITO</th>
+                                      <th>SOLICITANTE</th>
+                                      <th>REVISADO POR</th>
+                                      <th>DOCUMENTO</th>
+                                      <th>FECHA SOLICITUD</th>
+                                      <th>FECHA DE INGRESO</th>
                                       <th>ESTADO</th>
                                   </tr>
                               </thead>
@@ -109,50 +109,40 @@
                               <tbody>
                                   <tr>
                                       <th scope="row">1</th>
-                                      <td>MARTA DEL CARMEN MELARA</td>
-                                      <td>CCF 101</td>
-                                      <td>12/04/2018</td>
-                                      <td>27/04/2018</td>
-                                      <td>$ 75.50</td>
-                                      <td>PENDIENTE</td>
+                                      <td>MARIA DEL CARMEN</td>
+                                      <td>ALLAN BRITO</td>
+                                      <td>CFF 1001</td>
+                                      <td>14/05/2018</td>
+                                      <td>17/05/2018</td>
+                                      <td>PENDIENTE DE INGRESO</td>
                                   </tr>
                                   <tr>
                                     <th scope="row">2</th>
                                     <td>FLOR DE MARIA AMAYA</td>
-                                    <td>CCF 105</td>
-                                    <td>10/04/2018</td>
-                                    <td>10/05/2018</td>
-                                    <td>$ 90.45</td>
-                                    <td>PENDIENTE</td>
+                                    <td>LILIANA ALFARO</td>
+                                    <td></td>
+                                    <td>11/05/2018</td>
+                                    <td></td>
+                                    <td>DENEGADA</td>
                                   </tr>
                                   <tr>
                                     <th scope="row">3</th>
                                     <td>JOSE ROBERTO BORJAS</td>
-                                    <td>CCF 115</td>
+                                    <td>JUAN PEREZ</td>
+                                    <td>CCF 9595</td>
+                                    <td>10/04/2018</td>
                                     <td>13/04/2018</td>
-                                    <td>28/04/2018</td>
-                                    <td>$ 125.75</td>
-                                    <td>PENDIENTE</td>
+                                    <td>RECIBIDO</td>
                                   </tr>
                                   <tr>
                                       <th scope="row">4</th>
                                       <td>MARCOS ANTONIO CHEVES</td>
+                                      <td>JOSE MARTINEZ</td>
                                       <td>CCF 201</td>
-                                      <td>1/05/2018</td>
-                                      <td>10/05/2018</td>
-                                      <td>$ 520.00</td>
-                                      <td>PENDIENTE</td>
+                                      <td>06/04/2018</td>
+                                      <td>09/04/2018</td>
+                                      <td>RECIBIDO</td>
                                   </tr>
-                                  <tr>
-                                      <th scope="row">5</th>
-                                      <td>MARTA ALICIA DEL CARMEN</td>
-                                      <td>CCF 108</td>
-                                      <td>28/04/2018</td>
-                                      <td>15/04/2018</td>
-                                      <td>$ 75.00</td>
-                                      <td>CANCELADO</td>
-                                  </tr>
-
                               </tbody>
                               <!--Table body-->
                           </table>
@@ -166,41 +156,72 @@
                 <div class="tab-pane fade" id="panel6" role="tabpanel">
                     <!-- Material form contact -->
                      <form>
-                         <p class="h4 text-center mb-4">Buscar Credito</p>
+                         <p class="h4 text-center mb-4">Generar Orden de Compra</p>
 
-                         <table style="width:100%;">
-                            <tr>
-                               <td style="width:20%">
-                                  <!--Blue select-->
-                                  <select class="mdb-select colorful-select dropdown-primary">
-                                     <option value="">Buscar Por</option>
-                                      <option value="1">Cliente</option>
-                                      <option value="2">CCF</option>
-                                      <option value="3">Etc...</option>
-                                  </select>
-                                  <label>Buscar Por</label>
-                                  <!--/Blue select-->
-                               </td>
-                               <td style="width:5%;"></td>
-                               <td style="width:50%">
-                                  <!-- Material input text -->
-                                  <div class="md-form">
-                                      <i class="fa fa-user prefix grey-text"></i>
-                                      <input type="text" id="ParametroABuscar" name="ParametroABuscar" class="form-control" required>
-                                      <label for="ParametroABuscar"></label>
-                                  </div>
-                               </td>
-                               <td style="width:10%;"></td>
-                               <td style="width:15%">
-                                  <div class="text-center mt-4">
-                                      <button class="btn btn-outline-info" type="button">Buscar<i class="fa fa-search ml-2"></i></button>
-                                  </div>
-                               </td>
-                            </tr>
+                         <div class="row">
+                           <div class="col-6">
+                             <!-- Material input text -->
+                             <div class="md-form">
+                               <i class="fa fa-user prefix grey-text"></i>
+                                 <input type="text" id="SolicitanteOrdenCompra" name="SolicitanteOrdenCompra" class="form-control" value="MARIA DEL CARMEN AMAYA" style="width:80%;" disabled>
+                                 <label for="SolicitanteOrdenCompra">Solicitante</label>
+                             </div>
+                           </div>
+                           <div class="col-6">
+                             <!-- Material input datepicker -->
+                             <div class="md-form">
+                               <i class="fa fa-calendar prefix grey-text"></i>
+                                  <input placeholder="Seleccione Fecha de Orden de Compra" name="FechaOrdenServicio" id="FechaOrdenServicio" type="text" id="date-picker-example" class="form-control datepicker" style="width:80%; background: white;" required>
+                                  <label for="date-picker-example">Fecha de Orden de Compra</label>
+                             </div>
+                           </div>
+                         </div>
+                         <!--Table-->
+                         <table class="table table-hover table-responsive-md table-fixed">
+                             <!--Table head-->
+                             <thead class="special-color white-text">
+                                 <tr>
+                                     <th>CANTIDAD</th>
+                                     <th>PRODUCTO</th>
+                                     <th>LABORATORIO</th>
+                                     <th>PRESENTACIÓN</th>
+                                 </tr>
+                             </thead>
+                             <!--Table head-->
+
+                             <!--Table body-->
+                             <tbody>
+                                 <tr>
+                                     <th scope="row">1000</th>
+                                     <td>ACETAMINOFEN</td>
+                                     <td>MK</td>
+                                     <td>TABLETA</td>
+                                 </tr>
+                                 <tr>
+                                   <th scope="row">10</th>
+                                   <td>ACETAMINOFEN 120 ml</td>
+                                   <td>MK</td>
+                                   <td>JARABE</td>
+                                 </tr>
+                                 <tr>
+                                   <th scope="row">1500</th>
+                                   <td>RANITIDINA 150</td>
+                                   <td>SAIMED</td>
+                                   <td>CAPSULA</td>
+                                 </tr>
+                                 <tr>
+                                   <th scope="row">1200</th>
+                                   <td>RANITIDINA 300</td>
+                                   <td>SAIMED</td>
+                                   <td>CAPSULA</td>
+                                 </tr>
+                             </tbody>
+                             <!--Table body-->
                          </table>
-                         <tr>
-                            <hr>
-                         </tr>
+                         <!--Table-->
+                         <div class="text-center mt-4">
+                             <button class="btn btn-outline-info" type="button">Generar Orden<i class="fa fa-paper-plane-o ml-2"></i></button>
+                         </div>
                      </form>
                      <!-- Material form contact -->
                </div>
@@ -208,12 +229,12 @@
             </div>
          </div>
       </div>
-<script type="text/javascript">
-
-// Material Select Initialization
-$(document).ready(function() {
-$('.mdb-select').material_select();
-});
-</script>
+      <script type="text/javascript" src="../../assets/js/SelectorFecha.js"></script>
+      <script type="text/javascript">
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').material_select();
+      });
+      </script>
    </body>
 </html>

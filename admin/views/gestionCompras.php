@@ -77,29 +77,6 @@
                                       <td>17/05/2018</td>
                                       <td>$250.35</td>
                                       <td>PENDIENTE APROBACIÓN</td>
-                                      <td>
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-                                          <div class="modal-dialog modal-side modal-centered " role="document">
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-                                      </td>
                                   </tr>
                                   <tr>
                                     <th scope="row">2</th>
@@ -163,7 +140,7 @@
                          </div>
 
                          <div class="text-center mt-4">
-                             <button class="btn btn-outline-info" type="submit">Crear<i class="fa fa-paper-plane-o ml-2"></i></button>
+                             <button class="btn btn-outline-info" type="button">Crear<i class="fa fa-paper-plane-o ml-2"></i></button>
                          </div>
                      </form>
                      <!-- Material form contact -->
@@ -215,7 +192,7 @@
                        </div>
 
                         <div class="text-center mt-4">
-                           <button class="btn btn-outline-info" type="submit">Modificar<i class="fa fa-refresh ml-2"></i></button>
+                           <button class="btn btn-outline-info" type="button">Modificar<i class="fa fa-refresh ml-2"></i></button>
                         </div>
                     </form>
                     <!-- Material form contact -->

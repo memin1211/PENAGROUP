@@ -15,7 +15,7 @@ $('.datepicker').pickadate({
   labelYearSelect: 'Seleccione Año de la Lista',
   selectMonths: true,
   selectYears: true,
-  format: 'Seleccionast!e: dddd, dd mmm, yyyy',
+  format: 'Haz Seleccionad!o: dddd, dd mmm, yyyy',
   formatSubmit: 'yyyy/mm/dd',
   hiddenPrefix: 'prefix__',
   hiddenSuffix: '__suffix',
