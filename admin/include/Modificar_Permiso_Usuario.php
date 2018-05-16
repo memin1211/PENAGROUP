@@ -52,7 +52,7 @@
                  <div class="row col">
                    <div class="col-6">
                      <!-- Seleccionador de Permisos-->
-                     <select class="mdb-select" id="Select_Modulo0" name="Select_Mod_Administracion" multiple style="width:100%;" disabled>
+                     <select class="mdb-select" id="Select_Modulo0" name="Select_Mod_Administracion" multiple style="width:100%;" >
                           <option value="" disabled selected>Opciones de Menú</option>
                           <option value="1">CLIENTE</option>
                           <option value="2">Gestionar Clientes</option>
@@ -68,7 +68,7 @@
                    </div>
                    <div class="col-6">
                      <!-- Seleccionador de Permisos-->
-                     <select class="mdb-select" id="Select_Modulo1" name="Select_Mod_Punto_Venta" multiple style="width:100%;" disabled>
+                     <select class="mdb-select" id="Select_Modulo1" name="Select_Mod_Punto_Venta" multiple style="width:100%;" >
                           <option value="" disabled selected>Opciones de Menú</option>
                           <option value="1">COBROS</option>
                           <option value="2">Gestionar Cobros</option>
@@ -85,7 +85,7 @@
                  <div class="row col">
                    <div class="col-6">
                      <!-- Seleccionador de Permisos-->
-                     <select class="mdb-select" id="Select_Modulo2" name="Select_Mod_Inventario" multiple style="width:100%;" disabled>
+                     <select class="mdb-select" id="Select_Modulo2" name="Select_Mod_Inventario" multiple style="width:100%;" >
                           <option value="" disabled selected>Opciones de Menú</option>
                           <option value="1">BODEGA</option>
                           <option value="2">Gestionar Bodega</option>

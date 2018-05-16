@@ -8,7 +8,7 @@
     include_once("../include/panel.php");
     include_once("../include/menu.php");
   }else {
-    header('Location: ../../');
+    header('Location: ../');
   }
 ?>
 <!DOCTYPE html>
@@ -19,10 +19,10 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>.::PENAGROUP::.</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="../../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
-      <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-      <link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
-      <link rel="icon" type="image/ico" href="../../assets/img/logo.png" />
+      <link href="../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
+      <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+      <link rel="icon" type="image/ico" href="../assets/img/logo.png" />
       <style media="screen">
         a{
          color: white;
@@ -65,6 +65,7 @@
                                       <th>FECHA EMISIÓN</th>
                                       <th>MONTO</th>
                                       <th>ESTADO</th>
+                                      <th></th>
                                   </tr>
                               </thead>
                               <!--Table head-->
@@ -77,6 +78,7 @@
                                       <td>17/05/2018</td>
                                       <td>$250.35</td>
                                       <td>PENDIENTE APROBACIÓN</td>
+                                      <td><i class="fa fa-eye" aria-hidden="true" data-toggle="modal" data-target="#ModalVerDetalle" title="Ver Detalle"></i></td>
                                   </tr>
                                   <tr>
                                     <th scope="row">2</th>
@@ -84,12 +86,16 @@
                                     <td>16/05/2018</td>
                                     <td>$75.50</td>
                                     <td>APROBADA</td>
+                                    <td><i class="fa fa-eye" aria-hidden="true" data-toggle="modal" data-target="#ModalVerDetalle" title="Ver Detalle"></i></td>
                                   </tr>
                               </tbody>
                               <!--Table body-->
                           </table>
                           <!--Table-->
                       </div>
+                  </div>
+                  <div class="row">
+                    <?php include_once("../include/Ver_Detalle_Orden.php"); ?>
                   </div>
                 </div>
                 <!--/.Panel 1-->
@@ -201,7 +207,7 @@
             </div>
          </div>
       </div>
-      <script type="text/javascript" src="../../assets/js/SelectorFecha.js"></script>
+      <script type="text/javascript" src="../assets/js/SelectorFecha.js"></script>
       <script type="text/javascript">
       $(document).ready(function() {
         $('.mdb-select').material_select();

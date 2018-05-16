@@ -8,7 +8,7 @@
     include_once("../include/panel.php");
     include_once("../include/menu.php");
   }else {
-    header('Location: ../../');
+    header('Location: ../');
   }
 ?>
 <!DOCTYPE html>
@@ -19,10 +19,10 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>.::PENAGROUP::.</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="../../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
-      <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-      <link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
-      <link rel="icon" type="image/ico" href="../../assets/img/logo.png" />
+      <link href="../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
+      <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+      <link rel="icon" type="image/ico" href="../assets/img/logo.png" />
       <style media="screen">
         a{
          color: white;

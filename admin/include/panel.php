@@ -12,10 +12,10 @@
                     <a class="nav-link"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block"><?php echo $_SESSION['actual']['Nombre']?></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../include/salir.php"><i class="fa fa-power-off" aria-hidden="true"></i><span class="clearfix d-none d-sm-inline-block">SALIR</span></a>
+                    <a class="nav-link" href="../include/salir.php"><i class="fa fa-power-off" aria-hidden="true"></i><span class="clearfix d-none d-sm-inline-block">SALIR</span></a>
                 </li>
             </ul>
         </nav>
     </header>
-    <script type="text/javascript" src="../../assets/js/compiled.min.js"></script>
+    <script type="text/javascript" src="../assets/js/compiled.min.js"></script>
 </body>

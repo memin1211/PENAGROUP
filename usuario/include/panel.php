@@ -9,7 +9,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="../../assets/css/compiled.min.css" rel="stylesheet">
+    <link href="../assets/css/compiled.min.css" rel="stylesheet">
 </head>
 <body class="fixed-sn light-blue-skin">
     <header>
@@ -91,7 +91,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">PERFIL</a>
-                        <a class="dropdown-item" href="../../include/salir.php">SALIR</a>
+                        <a class="dropdown-item" href="../include/salir.php">SALIR</a>
                     </div>
                 </li>
             </ul>
@@ -103,7 +103,7 @@
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
-    <script type="text/javascript" src="../../assets/js/compiled.min.js"></script>
+    <script type="text/javascript" src="../assets/js/compiled.min.js"></script>
     <script>
         // SideNav Initialization
         $(".button-collapse").sideNav();

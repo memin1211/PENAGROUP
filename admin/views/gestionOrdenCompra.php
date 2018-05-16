@@ -8,7 +8,7 @@
     include_once("../include/panel.php");
     include_once("../include/menu.php");
   }else {
-    header('Location: ../../');
+    header('Location: ../');
   }
 ?>
 <!DOCTYPE html>
@@ -19,10 +19,10 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>.::PENAGROUP::.</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="../../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
-      <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-      <link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
-      <link rel="icon" type="image/ico" href="../../assets/img/logo.png" />
+      <link href="../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
+      <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+      <link rel="icon" type="image/ico" href="../assets/img/logo.png" />
       <style media="screen">
         a{
          color: white;
@@ -176,6 +176,22 @@
                              </div>
                            </div>
                          </div>
+                         <hr>
+                         <div class="row">
+                           <div class="col-9">
+                             <!-- Material input text -->
+                             <div class="md-form">
+                               <i class="fa fa-search prefix grey-text"></i>
+                                 <input type="text" id="Buscador" name="Buscador" class="form-control" value="" style="width:95%;">
+                                 <label for="Buscador">Buscar Producto</label>
+                             </div>
+                           </div>
+                           <div class="col-3">
+                             <div class="text-center mt-4">
+                                 <button class="btn btn-outline-info" type="button">Agregar Producto<i class="fa fa-paper-plane-o ml-2"></i></button>
+                             </div>
+                           </div>
+                         </div>
                          <!--Table-->
                          <table class="table table-hover table-responsive-md table-fixed">
                              <!--Table head-->
@@ -229,7 +245,7 @@
             </div>
          </div>
       </div>
-      <script type="text/javascript" src="../../assets/js/SelectorFecha.js"></script>
+      <script type="text/javascript" src="../assets/js/SelectorFecha.js"></script>
       <script type="text/javascript">
       // Material Select Initialization
       $(document).ready(function() {

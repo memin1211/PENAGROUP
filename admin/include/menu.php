@@ -14,7 +14,7 @@
         <ul id="slide-out" class="side-nav fixed  custom-scrollbar info-color">
             <li>
                 <div class="logo-wrapper info-color">
-                    <a href="index.php?sucursal=<?php echo $Sucursal ?>" class="nav-link"><img src="../../assets/img/logo_modulo.png" style="width: 100%;"/></a>
+                    <a href="modulo.php?sucursal=<?php echo $Sucursal ?>" class="nav-link"><img src="../assets/img/logo_modulo.png" style="width: 100%;"/></a>
                 </div>
             </li>
             <li style="margin-top: 35%;">
