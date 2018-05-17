@@ -1,37 +1,33 @@
-<div class="modal fade" id="InicioSesion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-   <!--Modal: Contact form-->
-   <div class="modal-dialog cascading-modal" role="document">
-
-       <!--Content-->
-       <div class="modal-content">
-
-           <!--Header-->
-           <div class="modal-header primary-color white-text">
-               <h4 class="title">
-                   <i class="fa fa-pencil"></i> Inicio de Sesión
-               </h4>
-           </div>
-           
-           <!--Body-->
-           <div class="modal-body">
-               <!-- Material input name -->
-               <div class="md-form form-sm">
-                   <i class="fa fa-user prefix"></i>
-                   <input type="text" id="Usuario" class="form-control form-control-sm">
-                   <label for="Usuario">Usuario</label>
-               </div>
-               <!-- Material input email -->
-               <div class="md-form form-sm">
-                   <i class="fa fa-lock prefix"></i>
-                   <input type="password" id="Clave" class="form-control form-control-sm">
-                   <label for="Clave">Clave</label>
-               </div>
-               <div class="text-center mt-4 mb-2">
-                   <input type="submit" class="botonlg" style="background-color: #3f5c80"  value="Ingresar" >
-               </div>
-           </div>
-       </div>
-       <!--/.Content-->
-   </div>
-   <!--/Modal: Contact form-->
-</div>
+<div class="modal fade" id="ModalIngresoSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Inicio de Sesi&oacute;n</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+             </button>
+          </div>
+          <div class="modal-body">
+             <!-- Default form register -->
+               <form id="">
+                <!-- Default input name -->
+                 <label for="NombreUsuario" class="grey-text">Usuario</label>
+                 <input type="text" id="NombreUsuario" name="NombreUsuario" id="" class="form-control" style="width:90%; color: #000;" required>
+
+                 <br>
+
+                 <!-- Default input email -->
+                 <label for="NuevaClaveUsuario" class="grey-text">Nueva Clave</label>
+                 <input type="password" id="NuevaClaveUsuario" name="NuevaClaveUsuario" id="" class="form-control" style="width:90%; color:#000;" required>
+
+                 <br>
+
+                 <div class="text-center mt-4">
+                     <input class="btn btn-outline-info" type="submit" value="Ingresar"></input>
+                 </div>
+               </form>
+               <!-- Default form register -->
+            </div>
+         </div>
+      </div>
+   </div>

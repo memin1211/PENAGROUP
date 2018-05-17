@@ -74,7 +74,7 @@
 
                      <div class="md-form my-0">
                          <i class="fa fa-group" aria-hidden="true" data-toggle="modal" data-target="#Registrarse" title="Registrarse"> Registrarse</i>
-                         <i class="fa fa-user" aria-hidden="true" data-toggle="modal" data-target="#InicioSesion" title="InicioSesion"> Iniciar Sesión</i>
+                         <i class="fa fa-user" aria-hidden="true" data-toggle="modal" data-target="#ModalIngresoSesion" title="InicioSesion"> Iniciar Sesión</i>
                      </div>
              </div>
              <!-- Collapsible content -->

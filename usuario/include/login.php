@@ -1,6 +1,6 @@
 <?php
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-  require_once "../db/conexion.php";
+  require_once "../../db/conexion.php";
   sleep(2);
   session_start();
 

@@ -1,8 +1,7 @@
-
 jQuery(document).on('submit','#formLg',function(event){
             event.preventDefault();
             jQuery.ajax({
-                url:'include/login.php',
+                url:'usuario/include/login.php',
                 type:'POST',
                 dataType:'json',
                 data:$(this).serialize(),
@@ -13,12 +12,9 @@ jQuery(document).on('submit','#formLg',function(event){
               .done(function(respuesta){
                 console.log(respuesta);
                 if (!respuesta.error) {
-                  $('#formLg').addClass('animated zoomOutLeft');
                   setTimeout(function(){
-                    if (respuesta.NombreNivel!='USUARIO') {
-                      location.href='admin/views/index.php';
-                    }else if (respuesta.NombreNivel=='USUARIO') {
-                      location.href='../usuario/views/';
+                    if (respuesta.TipoUsuario=='CLIENTE') {
+                      location.href='usuario/views/';
                     }
                   },3000);
 

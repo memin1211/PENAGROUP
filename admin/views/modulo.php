@@ -133,7 +133,7 @@
            <?php
            if ($Estado[3]=='A') {
              ?>
-             <a href="gestion.php?modulo=M4&sucursal=<?php echo $Sucursal ?>"><img src="../assets/img/admin/Modulo_Contabilidad.png" alt="Modulo de Contabilidad" title="CONTABILIDAD" class="modulos"></a>
+             <img src="../assets/img/admin/Modulo_Contabilidad.png" alt="Modulo de Contabilidad" title="CONTABILIDAD" class="modulos">
              <?php
            }else {
              ?>
