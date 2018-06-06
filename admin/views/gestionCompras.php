@@ -4,6 +4,7 @@
     if ($_SESSION['actual']['NombreNivel']=="USUARIO") {
       header('Location: ../../usuario/views/');
     }
+    include_once("../include/cabecera.php");
     $Sucursal=$_REQUEST['sucursal'];
     include_once("../include/panel.php");
     include_once("../include/menu.php");
@@ -11,27 +12,6 @@
     header('Location: ../');
   }
 ?>
-<!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>.::PENAGROUP::.</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
-      <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-      <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-      <link rel="icon" type="image/ico" href="../assets/img/logo.png" />
-      <style media="screen">
-        a{
-         color: white;
-        }
-        a:hover{
-         color: white;
-        }
-      </style>
-   </head>
    <body>
       <br><br><br>
       <div class="container" id="gestion">

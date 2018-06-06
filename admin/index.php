@@ -23,11 +23,10 @@
     <!-- Material Design Bootstrap -->
     <link href="assets/css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="txt/css" media="screen"/>
     <!-- Personal-->
     <link href="assets/css/main.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!--
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114067464-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -36,7 +35,6 @@
 
   gtag('config', 'UA-114067464-1');
 </script>
--->
 </head>
 <body>
   <div class="row col-lg-12">
@@ -48,12 +46,13 @@
       <div class="row">
         <div class="col-sm-1 col-md-3 col-lg-4"></div>
         <div class="col-sm-10 col-md-6 col-lg-4">
+           <img src="assets/img/logo.png" style="display:block; margin:auto; width:50%;" class="d-none d-sm-block">
           <form id="formLg">
-            <section class="form-elegant login animated zoomInRight">
+            <section class="form-elegant login animated zoomInRight"  class="margen-logo" style="margin-top:10px;">
             <!--Form without header-->
                 <div class="card">
-                  <div class="text-center card" style="background-color: #3f5c80">
-                      <h2 class="mb-4 text-white" style="margin-top:10px;"><strong>Inicio de Sesión</strong></h2>
+                  <div class="text-center card fixed-sn info-color">
+                      <h2 class="mb-4 text-white" style="margin-top: 30px;"><strong>Inicio de Sesión</strong></h2>
                   </div>
                     <div class="card-body mx-3">
                         <!--Body-->
@@ -66,7 +65,7 @@
                             <label for="Form-pass1">Contraseña</label>
                         </div>
                         <div class="text-center mb-3">
-                            <input type="submit" class="botonlg" style="background-color: #3f5c80"  value="Ingresar" >
+                            <input type="submit" class="botonlg info-color" value="Ingresar" >
                         </div>
                     </div>
                 </div>

@@ -1,18 +1,18 @@
-<body class="fixed-sn light-blue-skin">
+<body class="fixed-sn light-blue-skin" >
     <header>
-        <nav class="navbar fixed-top blue-gradient navbar-expand-lg scrolling-navbar double-nav">
+        <nav class="navbar fixed-top info-color navbar-expand-lg scrolling-navbar double-nav">
             <div class="float-left">
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
             </div>
             <div class="breadcrumb-dn mr-auto">
                 <p><?php echo $Sucursal;?></p>
             </div>
-            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+            <ul class="nav navbar-nav nav-flex-icons ml-auto" style="margin-bottom: -20px;">
                 <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block"><?php echo $_SESSION['actual']['Nombre']?></span></a>
+                    <a class="nav-link"><span class="clearfix d-none d-sm-inline-block chip info-color  text-white"><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"><?php echo $_SESSION['actual']['Nombre']?></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../include/salir.php"><i class="fa fa-power-off" aria-hidden="true"></i><span class="clearfix d-none d-sm-inline-block">SALIR</span></a>
+                   <a class="nav-link" href="../include/salir.php"><span class="clearfix d-sm-inline-block chip info-color  text-white"><i class="fa fa-power-off" aria-hidden="true"></i>SALIR</span></a>
                 </li>
             </ul>
         </nav>

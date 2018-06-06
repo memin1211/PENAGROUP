@@ -1,5 +1,9 @@
 <?php
+  date_default_timezone_set('America/El_Salvador');
   include_once("../../db/conexion.php");
+  $fechahoy= strftime('%Y/%m/%d');
+  $fecha = date("d/m/Y", strtotime($fechahoy));
+  $hora = date("g:i:s a");
   $modulo=$_REQUEST['modulo'];
   $Sucursal=$_REQUEST['sucursal'];
   //Consultando Menu del Usuario
@@ -9,22 +13,26 @@
   $titulo->execute();
   $resultado1=$titulo->get_result();
 ?>
-<body >
-    <header class="fixed-sn info-color">
+<body>
+    <header class="hidden-sn">
         <ul id="slide-out" class="side-nav fixed  custom-scrollbar info-color">
+          <li style="margin-top: 5px; margin-left: 10px;">
+            <p style=""><i class="fa fa-calendar" aria-hidden="true"> <?= "Fecha: ".$fecha; ?></i></p>
+            <p style=""><i class="fa fa-sun-o" aria-hidden="true"> <?= " Hora: ".$hora; ?></i></p>
+          </li>
             <li>
-                <div class="logo-wrapper info-color">
+                <div class="logo-wrapper">
                     <a href="modulo.php?sucursal=<?php echo $Sucursal ?>" class="nav-link"><img src="../assets/img/logo_modulo.png" style="width: 100%;"/></a>
                 </div>
             </li>
-            <li style="margin-top: 35%;">
-                <ul class="collapsible collapsible-accordion">
+            <li>
+                <ul class="collapsible collapsible-accordion" style="margin-top: 35%;">
                   <?php
                   while ($a=$resultado1->fetch_assoc()) {
                     $IdPadre=$a['IdPadre'];
                     ?>
-                    <li><a class="collapsible-header info-color arrow-r"><i class="fa fa-chevron-right"></i><?php echo $a['Detalle'];?><i class="fa fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body info-color">
+                    <li><a class="collapsible-header arrow-r"><i class="fa fa-chevron-right"></i><?php echo $a['Detalle'];?><i class="fa fa-angle-down rotate-icon"></i></a>
+                        <div class="collapsible-body">
                             <ul>
                               <?php
                               //Consultando SubMenus
@@ -34,7 +42,7 @@
                               $resultado=$subtitulo->get_result();
                               while ($b=$resultado->fetch_assoc()) {
                                 ?>
-                                <li><a href="<?php echo $b['Url'].'?modulo='.$modulo ?>&sucursal=<?php echo $Sucursal ?>" class="info-color"><?php echo $b['Detalle']; ?></a></li>
+                                <li><a href="<?php echo $b['Url'].'?modulo='.$modulo ?>&sucursal=<?php echo $Sucursal ?>"><?php echo $b['Detalle']; ?></a></li>
                                 <?php
                               }
                               ?>
