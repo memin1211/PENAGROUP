@@ -9,19 +9,19 @@
                      <th>NOMBRE</th>
                      <th>DIRECCION</th>
                      <th>TELEFONO</th>
-                     <th>ESTADO</th>
+                     <th>MUNICIPIO</th>
                   </tr>
                </thead>
                <tbody>
                   <?php
-               while ($a= mysqli_fetch_assoc($query)){
+               foreach ($MatrizSucursal as $value) {
                  ?>
                <tr>
-                  <td><?php echo $a['IdSucursal']; ?></td>
-                  <td><?php  echo $a['NombreSucursal']; ?></td>
-                  <td><?php echo $a['DireccionSucursal']; ?></td>
-                  <td><?php  echo $a['Telefono']; ?></td>
-                  <td><?php  echo $a['NombreEstado']; ?></td>
+                  <td><?php echo $value['Id']; ?></td>
+                  <td><?php  echo $value['Nombre']; ?></td>
+                  <td><?php echo $value['Direccion']; ?></td>
+                  <td><?php  echo $value['Telefono']; ?></td>
+                  <td><?php  echo $value['Municipio']; ?></td>
                </tr>
            <?php
                }
@@ -33,7 +33,7 @@
                      <th>NOMBRE</th>
                      <th>DIRECCION</th>
                      <th>TELEFONO</th>
-                     <th>ESTADO</th>
+                     <th>MUNICIPIO</th>
                   </tr>
                </tfoot>
            </table>

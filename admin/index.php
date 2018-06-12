@@ -1,9 +1,9 @@
 <?php
   session_start();
-  if (isset($_SESSION['actual'])) {
-    if ($_SESSION['actual']['NombreNivel']!="USUARIO") {
+  if (isset($_SESSION['usuario_actual'])) {
+    if ($_SESSION['usuario_actual']['Tipo_Usuario']=="Empleado") {
       header('Location: views/');
-    }elseif ($_SESSION['actual']['NombreNivel']=="USUARIO") {
+    }elseif ($_SESSION['usuario_actual']['Tipo_Usuario']=="Cliente") {
       header('Location: ../usuario/views/');
     }
   }
@@ -48,6 +48,7 @@
         <div class="col-sm-10 col-md-6 col-lg-4">
            <img src="assets/img/logo.png" style="display:block; margin:auto; width:50%;" class="d-none d-sm-block">
           <form id="formLg">
+            <input type="hidden" name="tipousuario" class="form-control" value="Empleado">
             <section class="form-elegant login animated zoomInRight"  class="margen-logo" style="margin-top:10px;">
             <!--Form without header-->
                 <div class="card">

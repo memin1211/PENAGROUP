@@ -15,8 +15,10 @@ jQuery(document).on('submit','#formLg',function(event){
                 if (!respuesta.error) {
                   $('#formLg').addClass('animated zoomOutLeft');
                   setTimeout(function(){
-                    if (respuesta.NombreNivel!='USUARIO') {
-                      location.href='views/';
+                    if (respuesta.Tipo_Usuario=='Empleado') {
+                      location.href='views/index.php?v=1';
+                    }else if (respuesta.Tipo_Usuario=='Cliente') {
+                      location.href='../usuario/views/';
                     }
                   },3000);
 

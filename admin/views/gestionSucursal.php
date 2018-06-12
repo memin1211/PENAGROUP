@@ -1,7 +1,9 @@
 <?php
 require_once("../include/validarSesion.php");
-$sqlVerSucursal="SELECT IdSucursal, NombreSucursal, DireccionSucursal, Telefono, NombreEstado FROM sucursal, estado WHERE sucursal.IdEstado=estado.IdEstado";
-$query=mysqli_query($mysqli, $sqlVerSucursal) or die(mysqli_error($db_handle));
+$Accion = "El Usuario ha Ingresado a Gestión de Sucursales";
+require_once("../include/bitacora.php");
+//$sqlVerSucursal="SELECT A.Id, A.Nombre, A.Direccion, A.Telefono, B.Nombre AS Municipio FROM erp_sucursal A INNER JOIN erp_municipio B ON (B.Id=A.Id_Municipio)";
+//$query=mysqli_query($mysqli, $sqlVerSucursal) or die(mysqli_error($db_handle));
 ?>
    <body>
       <br><br><br>
@@ -23,15 +25,15 @@ $query=mysqli_query($mysqli, $sqlVerSucursal) or die(mysqli_error($db_handle));
             <div class="tab-content">
 
                 <!--Panel 1-->
-                <?php include_once("verSucursal.php"); ?>
+                <?php include_once("../views/verSucursal.php"); ?>
                 <!--/.Panel 1-->
 
                 <!--Panel 2-->
-                <?php include_once("nuevoSucursal.php"); ?>
+                <?php include_once("../views/nuevoSucursal.php"); ?>
                 <!--/.Panel 2-->
 
                 <!--Panel 3-->
-                <?php include_once("modificarSucursal.php"); ?>
+                <?php include_once("../views/modificarSucursal.php"); ?>
                 <!--/.Panel 3-->
             </div>
          </div>

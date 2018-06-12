@@ -1,12 +1,19 @@
 <?php
   session_start();
-  if (isset($_SESSION['actual'])) {
-    if ($_SESSION['actual']['NombreNivel']=="USUARIO") {
+  if (isset($_SESSION['usuario_actual'])) {
+    $Sucursal=$_REQUEST['sucursal'];
+    $Bitacora_Variable=$_REQUEST['v'];
+    if ($Bitacora_Variable==1) {
+      $Accion = "El Usuario ha Ingresado a Sucursal ".$Sucursal;
+    }elseif ($Bitacora_Variable==2) {
+      $Accion = "El Usuario ha Retornado al Menu Principal de Modulos de la Sucursal ".$Sucursal;
+    }
+    if ($_SESSION['usuario_actual']['Tipo_Usuario']=="Cliente") {
       header('Location: ../../usuario/views/');
     }
+    require_once("../../db/conexion.php");
+    include_once("../include/bitacora.php");
     include_once("../include/header.php");
-    include_once("../../db/conexion.php");
-    $Sucursal="";
     include_once("../include/panel.php");
   }else {
     header('Location: ../');
@@ -14,84 +21,50 @@
 ?>
 <body>
    <?php
-               $sql=$mysqli->prepare("SELECT T2.IdModulo,T2.NombreModulo,T1.IdModulo AS IdModuloAsig,T1.NombreModulo AS moduloAsig,
-                          CASE WHEN T1.IdModulo IS NULL THEN 'I' ELSE 'A' END AS Estado FROM (
-                            SELECT C.IdModulo,E.NombreModulo FROM menusuario A
-                            INNER JOIN usuario B ON (A.IdUsuario = B.IdUsuario)
-                            INNER JOIN menu C ON (A.IdMenu = C.IdPadre AND C.IdEstado = 'E1')
-                            INNER JOIN menu D ON (C.IdPadre = D.IdMenu AND D.IdEstado = 'E1')
-                            INNER JOIN modulos E ON (C.IdModulo = E.IdModulo)
-                            WHERE A.IdUsuario = ? AND A.IdEstado = 'E1' GROUP BY C.IdModulo
+               $sql=$mysqli->prepare("SELECT DISTINCT T2.Id,T2.Nombre,T2.Logo,T1.Id_Modulo AS IdModuloAsig,T1.Nombre AS moduloAsig,
+                          CASE WHEN T1.Id_Modulo IS NULL THEN 'I' ELSE 'A' END AS Estado FROM (
+                            SELECT E.Id_Modulo,G.Nombre FROM erp_acceso A
+                              INNER JOIN erp_rol D ON (D.Id = A.Id_Rol)
+                              INNER JOIN erp_rol_usuario C ON (C.Id_Rol = D.Id)
+                              INNER JOIN erp_usuario B ON (B.Id = C.Id_Usuario)
+                              INNER JOIN erp_menu E ON (E.Id = A.Id_Menu AND E.Id_Estado=1)
+                              INNER JOIN erp_menu F ON (F.Id = E.Id_Menu_Padre AND F.Id_Estado=1)
+                              INNER JOIN erp_modulo G ON (G.Id = E.Id_Modulo)
+                              WHERE A.Id_Rol = D.Id AND D.Id = C.Id_Rol AND C.Id_Usuario=? GROUP BY E.Id
                             )AS T1
-                          RIGHT JOIN modulos T2 ON (T2.IdModulo = T1.IdModulo)
-                          ORDER BY T2.IdModulo ASC");
-                $sql->bind_param('s',$_SESSION['actual']['IdUsuario']);
+                          RIGHT JOIN erp_modulo T2 ON (T2.Id = T1.Id_Modulo)
+                          ORDER BY T2.Id ASC");
+                $sql->bind_param('s',$_SESSION['usuario_actual']['Id']);
                 $sql->execute();
                 $rs=$sql->get_result();
-                if ($rs->num_rows>0){
-                  while ($datos= $rs->fetch_assoc()) {
-                     $Estado[]=$datos['Estado']; //Creamos un array para poder acceder a los Estados de Cada Modulo Segun el Tipo de Usuario
-                  }
-
-                }
    ?>
    <div class="container" id="contenedor">
       <div class="row m1">
          <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
-         <div class="col-sm-2 col-md-2 col-lg-2">
-           <?php
-           if ($Estado[0]=='A') {
-             ?>
-             <a href="gestion.php?modulo=M1&sucursal=<?php echo $Sucursal ?>"><img src="../assets/img/admin/Modulo_Administracion.png" alt="Modulo de Administracion" title="ADMINISTRACIÓN" class="modulos"></a>
-             <?php
-           }else {
-             ?>
-             <img src="../assets/img/admin/Modulo_Administracion.png" alt="Modulo de Administracion" title="ADMINISTRACIÓN" class="modulos"></i>
-             <?php
+
+         <?php
+         if ($rs->num_rows>0){
+           while ($datos= $rs->fetch_assoc()) {
+              //Creamos un array para poder acceder a los Estados de Cada Modulo Segun el Tipo de Usuario
+             if ($datos['Estado']=='A') {
+               ?>
+               <div class="col-sm-2 col-md-2 col-lg-2">
+                 <a href="gestion.php?modulo=<?= $datos['Id']; ?>&sucursal=<?= $Sucursal; ?>&v=1"><img src="<?= $datos['Logo']; ?>" alt="Modulo de <?= $datos['Nombre']; ?>" title="<?= $datos['Nombre']; ?>" class="modulos"></a>
+               </div>
+               <?php
+             }else {
+               ?>
+               <div class="col-sm-2 col-md-2 col-lg-2">
+                 <img src="<?= $datos['Logo']; ?>" alt="Modulo de <?= $datos['Nombre']; ?>" title="<?= $datos['Nombre']; ?>" class="modulos"></a>
+               </div>
+               <?php
+             }
            }
-           ?>
-       </div>
+         }
+         ?>
+
        <div  class="col-sm-2 col-md-2 col-lg-2">
-           <?php
-           if ($Estado[1]=='A') {
-             ?>
-             <a href="gestion.php?modulo=M2&sucursal=<?php echo $Sucursal ?>"><img src="../assets/img/admin/Punto_de_Venta.png" alt="Modulo de Ventas" title="PUNTO DE VENTA" class="modulos"></a>
-             <?php
-           }else {
-             ?>
-             <img src="../assets/img/admin/Punto_de_Venta.png" alt="Modulo de Ventas" title="PUNTO DE VENTA" class="modulos">
-             <?php
-           }
-           ?>
-       </div>
-       <div  class="col-sm-2 col-md-2 col-lg-2">
-           <?php
-           if ($Estado[2]=='A') {
-             ?>
-             <a href="gestion.php?modulo=M3&sucursal=<?php echo $Sucursal ?>"><img src="../assets/img/admin/Modulo_Inventario.png" alt="Modulo de Inventario" title="INVENTARIO" class="modulos"></a>
-             <?php
-           }else {
-             ?>
-             <img src="../assets/img/admin/Modulo_Inventario.png" alt="Modulo de Inventario" title="INVENTARIO" class="modulos">
-             <?php
-           }
-           ?>
-       </div>
-       <div class="col-sm-2 col-md-2 col-lg-2">
-           <?php
-           if ($Estado[3]=='A') {
-             ?>
-             <a href="gestion.php?modulo=M4&sucursal=<?php echo $Sucursal ?>"><img src="../assets/img/admin/Modulo_Contabilidad.png" alt="Modulo de Contabilidad" title="CONTABILIDAD" class="modulos"></a>
-             <?php
-           }else {
-             ?>
-             <img src="../assets/img/admin/Modulo_Contabilidad.png" alt="Modulo de Contabilidad" title="CONTABILIDAD" class="modulos">
-             <?php
-           }
-           ?>
-       </div>
-       <div  class="col-sm-2 col-md-2 col-lg-2">
-          <a href="index.php"><img src="../assets/img/admin/Cambir_Sucursal.png" alt="Modulo de Inventario" title="CAMBIAR SUCURSAL" class="modulos"></a>
+          <a href="index.php?v=2"><img src="../assets/img/admin/Cambir_Sucursal.png" alt="Modulo de Inventario" title="CAMBIAR SUCURSAL" class="modulos"></a>
        </div>
        <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
     </div>

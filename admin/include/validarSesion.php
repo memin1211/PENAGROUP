@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION['actual'])) {
-  if ($_SESSION['actual']['NombreNivel']=="USUARIO") {
+if (isset($_SESSION['usuario_actual'])) {
+  if ($_SESSION['usuario_actual']['Tipo_Usuario']=="Cliente") {
     header('Location: ../../usuario/views/');
   }
   include_once("../include/header.php");

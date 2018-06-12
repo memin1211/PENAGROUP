@@ -1,5 +1,7 @@
 <?php
 require_once("../include/validarSesion.php");
+$Accion = "El Usuario ha Ingresado a Gestión de Clientes";
+require_once("../include/bitacora.php");
 ?>
    <body onload = "document.Form.PrimerNombreCliente.focus()">
       <br><br><br>

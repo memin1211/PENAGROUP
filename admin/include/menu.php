@@ -7,8 +7,10 @@
   $modulo=$_REQUEST['modulo'];
   $Sucursal=$_REQUEST['sucursal'];
   //Consultando Menu del Usuario
-  $IdUsuario=$_SESSION['actual']['IdUsuario'];
-  $titulo=$mysqli->prepare("SELECT C.IdPadre,D.IdMenu,D.Detalle,D.Url as URL FROM menusuario A INNER JOIN usuario B ON (A.IdUsuario = B.IdUsuario) INNER JOIN menu C ON (A.IdMenu = C.IdMenu AND C.IdEstado = 'E1' AND IdModulo = ?) INNER JOIN menu D ON (C.IdPadre = D.IdMenu AND D.IdEstado = 'E1') WHERE A.IdUsuario = '1' GROUP BY D.IdMenu,D.Detalle ORDER BY Detalle ASC");
+  $IdUsuario=$_SESSION['usuario_actual']['Id'];
+  $titulo=$mysqli->prepare("SELECT C.Id_Menu_Padre,D.Id,D.Nombre FROM erp_acceso A INNER JOIN erp_menu C ON (A.Id_Menu = C.Id AND C.Id_Modulo = ? AND C.Id_Estado=1)
+INNER JOIN erp_menu D ON (C.Id_Menu_Padre = D.Id AND D.Id_Estado=1) INNER JOIN erp_rol E ON (E.Id = A.Id_Rol) INNER JOIN erp_rol_usuario F ON (F.Id_Rol = E.Id)
+INNER JOIN erp_usuario G ON (G.Id_Usuario = F.Id_Usuario) WHERE G.Id = 1 GROUP BY D.Id,D.Nombre ORDER BY Nombre ASC");
   $titulo->bind_param('s',$modulo);
   $titulo->execute();
   $resultado1=$titulo->get_result();
@@ -22,27 +24,29 @@
           </li>
             <li>
                 <div class="logo-wrapper">
-                    <a href="modulo.php?sucursal=<?php echo $Sucursal ?>" class="nav-link"><img src="../assets/img/logo_modulo.png" style="width: 100%;"/></a>
+                    <a href="../views/modulo.php?sucursal=<?php echo $Sucursal ?>&v=2" class="nav-link"><img src="../assets/img/logo_modulo.png" style="width: 100%;"/></a>
                 </div>
             </li>
             <li>
                 <ul class="collapsible collapsible-accordion" style="margin-top: 35%;">
                   <?php
                   while ($a=$resultado1->fetch_assoc()) {
-                    $IdPadre=$a['IdPadre'];
+                    $IdPadre=$a['Id_Menu_Padre'];
                     ?>
-                    <li><a class="collapsible-header arrow-r"><i class="fa fa-chevron-right"></i><?php echo $a['Detalle'];?><i class="fa fa-angle-down rotate-icon"></i></a>
+                    <li><a class="collapsible-header arrow-r"><i class="fa fa-chevron-right"></i><?php echo $a['Nombre'];?><i class="fa fa-angle-down rotate-icon"></i></a>
                         <div class="collapsible-body">
                             <ul>
                               <?php
                               //Consultando SubMenus
-                              $subtitulo=$mysqli->prepare("SELECT A.IdMenu AS MENU_SEC, C.Detalle,C.Url,C.IdPadre,C.IdMenu,D.Url as URL FROM menusuario A INNER JOIN usuario B ON (A.IdUsuario = B.IdUsuario) INNER JOIN menu C ON (A.IdMenu = C.IdMenu AND C.IdEstado = 'E1') INNER JOIN menu D ON (C.IdPadre = D.IdMenu AND D.IdEstado = 'E1') WHERE A.IdUsuario = ? AND C.IdPadre = ? AND A.IdEstado = 'E1' AND A.IdMenu<>D.IdPadre ORDER BY C.Detalle ASC");
+                              $subtitulo=$mysqli->prepare("SELECT A.Id AS MENU_SEC, B.Nombre,B.Url,B.Id_Menu_Padre,B.Id,C.Url as URL FROM erp_acceso A INNER JOIN erp_menu B ON (A.Id_Menu = B.Id AND B.Id_Estado=1)
+                              INNER JOIN erp_menu C ON (B.Id_Menu_Padre = C.Id AND C.Id_Estado=1) INNER JOIN erp_rol D ON (D.Id = A.Id_Rol) INNER JOIN erp_rol_usuario E ON (E.Id_Rol = D.Id)
+                              INNER JOIN erp_usuario F ON (F.Id = E.Id_Usuario)WHERE F.Id = ? AND C.Id_Menu_Padre = ? AND A.Id_Menu<>B.Id_Menu_Padre ORDER BY B.Nombre ASC");
                               $subtitulo->bind_param('ss',$IdUsuario,$IdPadre);
                               $subtitulo->execute();
                               $resultado=$subtitulo->get_result();
                               while ($b=$resultado->fetch_assoc()) {
                                 ?>
-                                <li><a href="<?php echo $b['Url'].'?modulo='.$modulo ?>&sucursal=<?php echo $Sucursal ?>"><?php echo $b['Detalle']; ?></a></li>
+                                <li><a href="<?php echo $b['Url']; ?>?modulo=<?= $modulo; ?>&sucursal=<?= $Sucursal; ?>"><?php echo $b['Nombre']; ?></a></li>
                                 <?php
                               }
                               ?>
