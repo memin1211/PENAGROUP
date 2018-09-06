@@ -34,7 +34,7 @@
   $Accion1 = $Accion;
   $Ip_Ingreso = ObtenerIP();
 
-	$sql_Bitacora="INSERT INTO erp_bitacora(Id_Usuario,Descripcion,Hora_Registro,Fecha_Registro,Ip_Ingreso) VALUES ($Id_Usuario,'$Accion1','$Hora_Registro','$Fecha_Registro','$Ip_Ingreso')";
-	$rs=mysqli_query($mysqli, $sql_Bitacora) or die(mysqli_error($mysqli));
+	//$sql_Bitacora="INSERT INTO erp_bitacora(Id_Usuario,Descripcion,Hora_Registro,Fecha_Registro,Ip_Ingreso) VALUES ($Id_Usuario,'$Accion1','$Hora_Registro','$Fecha_Registro','$Ip_Ingreso')";
+	//$rs=mysqli_query($mysqli, $sql_Bitacora) or die(mysqli_error($mysqli));
 
 ?>

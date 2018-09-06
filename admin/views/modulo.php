@@ -2,6 +2,7 @@
   session_start();
   if (isset($_SESSION['usuario_actual'])) {
     $Sucursal=$_REQUEST['sucursal'];
+    $Id_Sucursal=$_REQUEST['Id_Sucursal'];
     $Bitacora_Variable=$_REQUEST['v'];
     if ($Bitacora_Variable==1) {
       $Accion = "El Usuario ha Ingresado a Sucursal ".$Sucursal;
@@ -21,19 +22,7 @@
 ?>
 <body>
    <?php
-               $sql=$mysqli->prepare("SELECT DISTINCT T2.Id,T2.Nombre,T2.Logo,T1.Id_Modulo AS IdModuloAsig,T1.Nombre AS moduloAsig,
-                          CASE WHEN T1.Id_Modulo IS NULL THEN 'I' ELSE 'A' END AS Estado FROM (
-                            SELECT E.Id_Modulo,G.Nombre FROM erp_acceso A
-                              INNER JOIN erp_rol D ON (D.Id = A.Id_Rol)
-                              INNER JOIN erp_rol_usuario C ON (C.Id_Rol = D.Id)
-                              INNER JOIN erp_usuario B ON (B.Id = C.Id_Usuario)
-                              INNER JOIN erp_menu E ON (E.Id = A.Id_Menu AND E.Id_Estado=1)
-                              INNER JOIN erp_menu F ON (F.Id = E.Id_Menu_Padre AND F.Id_Estado=1)
-                              INNER JOIN erp_modulo G ON (G.Id = E.Id_Modulo)
-                              WHERE A.Id_Rol = D.Id AND D.Id = C.Id_Rol AND C.Id_Usuario=? GROUP BY E.Id
-                            )AS T1
-                          RIGHT JOIN erp_modulo T2 ON (T2.Id = T1.Id_Modulo)
-                          ORDER BY T2.Id ASC");
+               $sql=$mysqli->prepare("SELECT DISTINCT T2.Id,T2.Nombre,T2.Logo,T1.Id_Modulo AS IdModuloAsig,T1.Nombre AS moduloAsig, CASE WHEN T1.Id_Modulo IS NULL THEN 'I' ELSE 'A' END AS Estado FROM ( SELECT E.Id_Modulo,G.Nombre FROM erp_menu_usuario A INNER JOIN erp_usuario B ON (B.Id = A.Id_Usuario) INNER JOIN erp_menu E ON (E.Id = A.Id_Menu AND A.Id_Estado=1) INNER JOIN erp_menu F ON (F.Id = E.Id_Menu_Padre AND A.Id_Estado=1) INNER JOIN erp_modulo G ON (G.Id=E.Id_Modulo AND G.Id_Estado=1) WHERE B.Id_Usuario=? GROUP BY E.Id )AS T1 RIGHT JOIN erp_modulo T2 ON (T2.Id = T1.Id_Modulo) ORDER BY T2.Id ASC");
                 $sql->bind_param('s',$_SESSION['usuario_actual']['Id']);
                 $sql->execute();
                 $rs=$sql->get_result();
@@ -49,7 +38,7 @@
              if ($datos['Estado']=='A') {
                ?>
                <div class="col-sm-2 col-md-2 col-lg-2">
-                 <a href="gestion.php?modulo=<?= $datos['Id']; ?>&sucursal=<?= $Sucursal; ?>&v=1"><img src="<?= $datos['Logo']; ?>" alt="Modulo de <?= $datos['Nombre']; ?>" title="<?= $datos['Nombre']; ?>" class="modulos"></a>
+                 <a href="gestion.php?modulo=<?= $datos['Id']; ?>&Id_Sucursal=<?= $Id_Sucursal; ?>&sucursal=<?= $Sucursal; ?>&v=1"><img src="<?= $datos['Logo']; ?>" alt="Modulo de <?= $datos['Nombre']; ?>" title="<?= $datos['Nombre']; ?>" class="modulos"></a>
                </div>
                <?php
              }else {

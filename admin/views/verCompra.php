@@ -1,50 +1,74 @@
-<div class="tab-pane fade in show active" id="verCompra" role="tabpanel">
-   <!--Pagination -->
-      <?php include_once("../include/paginador.php"); ?>
-    <!--Fin Pagination -->
-    <br>
-    <div class="card">
-      <div class="card-body">
-          <!--Table-->
-          <table class="table table-hover table-responsive-md table-fixed">
-              <!--Table head-->
-              <thead class="special-color white-text">
-                  <tr>
-                      <th>CÓDIGO</th>
-                      <th>NOMBRE</th>
-                      <th>FECHA EMISIÓN</th>
-                      <th>MONTO</th>
-                      <th>ESTADO</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <!--Table head-->
-
-              <!--Table body-->
-              <tbody>
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>ROBLES S.A DE C.V</td>
-                      <td>17/05/2018</td>
-                      <td>$250.35</td>
-                      <td>PENDIENTE APROBACIÓN</td>
-                      <td><i class="fa fa-eye puntero" aria-hidden="true" data-toggle="modal" data-target="#ModalVerDetalle" title="Ver Detalle"></i></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>BIOKEMICAL S.A DE C.V</td>
-                    <td>16/05/2018</td>
-                    <td>$75.50</td>
-                    <td>APROBADA</td>
-                    <td><i class="fa fa-eye puntero" aria-hidden="true" data-toggle="modal" data-target="#ModalVerDetalle" title="Ver Detalle"></i></td>
-                  </tr>
-              </tbody>
-              <!--Table body-->
-          </table>
-          <!--Table-->
-      </div>
-  </div>
-  <div class="row">
-    <?php include_once("../include/Ver_Detalle_Orden.php"); ?>
-  </div>
-</div>
+<?php
+require_once("../include/validarSesion.php");
+$Accion = "El Usuario ha Ingresado a Ver Compras";
+require_once("../include/bitacora.php");
+?>
+   <body>
+      <br><br><br>
+      <div class="container" id="gestion">
+         <div class="container">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-justified info-color" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#verCompra" role="tab" style="margin-left:10px;"><i class="fa fa-address-book" aria-hidden="true"></i> Catálogo de Compras</a>
+                </li>
+            </ul>
+            <!-- Tab panels -->
+            <div class="tab-content">
+              <div class="tab-pane fade in show active" id="verUsuario" role="tabpanel">
+                  <div class="card">
+                    <div class="card-body">
+                       <div class="row">
+                         <table id="example" class="display" cellspacing="0" width="100%">
+                             <thead>
+                                <tr>
+                                   <th>CÓDIGO</th>
+                                   <th>NOMBRE</th>
+                                   <th>DIRECCIÓN</th>
+                                   <th>TELÉFONO FIJO</th>
+                                   <th>CELULAR</th>
+                                   <th>CORREO</th>
+                                   <th>ESTADO</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                   <tr>
+                                      <td>1</td>
+                                      <td>Jomi S.A de C.V</td>
+                                      <td>Mejicanos, San Salvador</td>
+                                      <td>2585-6596</td>
+                                      <td></td>
+                                      <td>ventas@jomi.com</td>
+                                      <td>Activo</td>
+                                   </tr>
+                             </tbody>
+                             <tfoot>
+                                <tr>
+                                  <th>CÓDIGO</th>
+                                  <th>NOMBRE</th>
+                                  <th>DIRECCIÓN</th>
+                                  <th>TELÉFONO FIJO</th>
+                                  <th>CELULAR</th>
+                                  <th>CORREO</th>
+                                  <th>ESTADO</th>
+                                </tr>
+                             </tfoot>
+                         </table>
+                       </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                  <!-- Modal Detalle de Orden-->
+                    <?php include_once("../include/Ver_Detalle_Orden.php"); ?>
+                  <!-- Fin Modal Detalle de Orden-->
+                </div>
+
+              </div>
+            </div>
+         </div>
+      </div>
+      <?php include_once("../include/footer.php"); ?>
+   </body>
+</html>

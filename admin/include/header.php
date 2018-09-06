@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content='width=device-width initial-scale=1'>
+    <meta name='mobile-web-app-capable' content='yes'>
     <title>.::PENAGROUP::.</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../assets/css/compiled.min.css" rel="stylesheet" type="text/css">
@@ -17,7 +17,30 @@
       position: inherit;
       width: 100%;
       min-height: 10px;
-      margin-top:25%;
+      margin-top:20%;
+    }
+
+    #DivSucursal{
+       margin-top:15%;
+    }
+
+    @media (max-width:570px) {
+      #DivSucursal{
+          margin-top:25%;
+      }
+    }
+
+    .Margin-Frm{
+      margin:1% 3% 1% 1%;
+    }
+
+    .Title-Margin{
+      margin-top:7%;
+      margin-bottom:1%;
+    }
+
+    .Card-Bottom{
+      margin:1% 3% 3% 3%;
     }
 
     .m1{
@@ -29,7 +52,7 @@
     }
 
     .sucursal{
-     width: 75%;
+     width: 80%;
      display: block;
      margin-left: auto;
      margin-right: auto;

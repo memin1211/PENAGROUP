@@ -2,7 +2,7 @@
 jQuery(document).on('submit','#formLg',function(event){
             event.preventDefault();
             jQuery.ajax({
-                url:'include/login.php',
+                url:'admin/include/login.php',
                 type:'POST',
                 dataType:'json',
                 data:$(this).serialize(),
@@ -16,9 +16,9 @@ jQuery(document).on('submit','#formLg',function(event){
                   $('#formLg').addClass('animated zoomOutLeft');
                   setTimeout(function(){
                     if (respuesta.Tipo_Usuario=='Empleado') {
-                      location.href='views/index.php?v=1';
-                    }else if (respuesta.Tipo_Usuario=='Cliente') {
-                      location.href='../usuario/views/';
+                      location.href='admin/views/index.php?v=1';
+                    }else{
+                      location.href='index.php';
                     }
                   },3000);
 

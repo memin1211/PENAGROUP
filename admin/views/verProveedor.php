@@ -1,59 +1,62 @@
-<div class="tab-pane fade in show active" id="verProveedor" role="tabpanel">
-   <!--Pagination -->
-      <?php include_once("../include/paginador.php"); ?>
-   <!--Fin Pagination -->
-   <br>
-    <div class="card">
-      <div class="card-body">
-          <!--Table-->
-          <table class="table table-hover table-responsive-md table-fixed">
-              <!--Table head-->
-              <thead class="special-color white-text">
-                  <tr>
-                      <th>CODIGO</th>
-                      <th>NOMBRE</th>
-                      <th>DIRECCIÓN</th>
-                      <th>TELÉFONO FIJO</th>
-                      <th>CÉLULAR</th>
-                      <th>CORREO</th>
-                      <th>ESTADO</th>
-                  </tr>
-              </thead>
-              <!--Table head-->
-
-              <!--Table body-->
-              <tbody>
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>JOMI S.A DE C.V</td>
-                      <td>MEJICANOS, SAN SALVADOR.</td>
-                      <td>2575-2565</td>
-                      <td></td>
-                      <td></td>
-                      <td>ACTIVO</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>BIOKEMIKAL S.A DE C.V</td>
-                    <td>COLONIA MEDICA, SAN SALVADOR.</td>
-                    <td>2586-6585</td>
-                    <td>7598-6654</td>
-                    <td>VENTAS@BIOKEMIKAL.COM</td>
-                    <td>ACTIVO</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>ROBLES S.A DE C.V</td>
-                    <td>SAN SALVADOR, SAN SALVADOR.</td>
-                    <td>2235-5575</td>
-                    <td></td>
-                    <td>VENTAS@ROBLES.COM</td>
-                    <td>ACTIVO</td>
-                  </tr>
-              </tbody>
-              <!--Table body-->
-          </table>
-          <!--Table-->
-      </div>
-  </div>
-</div>
+<?php
+require_once("../include/validarSesion.php");
+$Accion = "El Usuario ha Ingresado a Ver Proveedores";
+require_once("../include/bitacora.php");
+include_once("../controllers/controllers_Proveedor.php");
+?>
+   <body>
+      <div class="container Title-Margin">
+        <div class="row info-color  text-center" style="border-radius: 10px;">
+                <label class="h3 font-italic white-text" style="margin-left:15px;">Catálogo de Proveedores</label>
+        </div>
+      </div>
+         <div class="container">
+             <!-- Tab panels -->
+                        <div class="row Card-Bottom">
+                         <table id="example" class="display" cellspacing="0" width="100%">
+                             <thead>
+                                <tr>
+                                   <th>CÓDIGO</th>
+                                   <th>NOMBRE</th>
+                                   <th>DIRECCIÓN</th>
+                                   <th>TELÉFONO</th>
+                                   <th>MUNICIPIO</th>
+                                   <th>CUENTA</th>
+                                   <th>ESTADO</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <?php
+                                  foreach ($MatrizProveedor as $value) {
+                                    ?>
+                                  <tr>
+                                     <td width="10%"><?= $value['Id']; ?></td>
+                                     <td width="25%"><?= $value['Nombre']; ?></td>
+                                     <td width="25%"><?= $value['Direccion']; ?></td>
+                                     <td width="10%"><?= $value['Telefono_Fijo']; ?></td>
+                                     <td width="10%"><?= $value['Municipio']; ?></td>
+                                     <td width="10%"><?= $value['Codigo_Cuenta']; ?></td>
+                                     <td width="10%"><?= $value['Estado']; ?></td>
+                                  </tr>
+                               <?php
+                                  }
+                                ?>
+                             </tbody>
+                             <tfoot>
+                                <tr>
+                                   <th>CÓDIGO</th>
+                                  <th>NOMBRE</th>
+                                  <th>DIRECCIÓN</th>
+                                  <th>TELÉFONO</th>
+                                  <th>MUNICIPIO</th>
+                                  <th>CUENTA</th>
+                                  <th>ESTADO</th>
+                                </tr>
+                             </tfoot>
+                         </table>
+                       </div>
+                    </div>
+      <?php include_once("../include/footer.php"); ?>
+      <script type="text/javascript" src="../assets/js/ValidacionesJS/ValidacionProveedor.js"></script>
+   </body>
+</html>

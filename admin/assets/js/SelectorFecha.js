@@ -15,9 +15,12 @@ $('.datepicker').pickadate({
   labelYearSelect: 'Seleccione Año de la Lista',
   selectMonths: true,
   selectYears: true,
-  format: 'Haz Seleccionad!o: dddd, dd mmm, yyyy',
-  formatSubmit: 'yyyy/mm/dd',
-  hiddenPrefix: 'prefix__',
-  hiddenSuffix: '__suffix',
-  min: new Date(1950,1,01)
+  //Date Format
+  format: 'd/mm/yyyy',
+  formatSubmit: 'd/mm/yyyy',
+  hiddenPrefix: undefined,
+  hiddenSuffix: '_submit',
+  hiddenName: undefined,
+  min: [1950,1,01]
+
 })

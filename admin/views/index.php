@@ -7,10 +7,6 @@
     }elseif ($Bitacora_Variable==2) {
       $Accion = "El Usuario ha Retornado a Sucursales";
     }
-
-    if ($_SESSION['usuario_actual']['Tipo_Usuario']=="Cliente") {
-      header('Location: ../../usuario/views/');
-    }
     require_once("../../db/conexion.php");
     include_once("../include/bitacora.php");
     include_once("../include/header.php");
@@ -23,25 +19,32 @@
     $sql->execute();
     $rs=$sql->get_result();
   }else {
-    header('Location: ../');
+    header('Location: ../../');
   }
 ?>
 <body>
-  <div class="container" id="contenedor">
-    <div class="row m1">
-      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
-      <?php
-      while ($Sucursal=$rs->fetch_assoc()) {
-        ?>
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <a href="modulo.php?sucursal=<?= $Sucursal['Nombre_Corto']; ?>&v=1"><img src="<?= $Sucursal['Logo']; ?>" alt="<?= $Sucursal['Nombre_Corto']; ?>" title="<?= $Sucursal['Nombre_Corto']; ?>" class="sucursal">
-       </a>
-       </div>
-        <?php
-      }
-      ?>
-      <div class="col-sm-3 col-md-3 col-lg-3"></div>
-    </div>
-  </div>
+   <div class="container" id="DivSucursal">
+      <div class="row">
+         <div class="col-12">
+            <!--Jumbotron-->
+            <div class="jumbotron text-center blue-grey lighten-5 ">
+                <!--Text-->
+                <div class="d-flex justify-content-center">
+                  <?php
+                  while ($Sucursal=$rs->fetch_assoc()) {
+                    ?>
+                    <div class="col-4">
+                      <a href="modulo.php?Id_Sucursal=<?= $Sucursal['Id']; ?>&sucursal=<?= $Sucursal['Nombre_Corto']; ?>&v=1"><img src="<?= $Sucursal['Logo']; ?>" alt="<?= $Sucursal['Nombre_Corto']; ?>" title="<?= $Sucursal['Nombre_Corto']; ?>" class="sucursal"></a>
+                    </div>
+                    <?php
+                  }
+                  ?>
+                </div>
+                <hr class="my-4 pb-2">
+            </div>
+            <!--Jumbotron-->
+         </div>
+      </div>
+   </div>
 </body>
 </html>

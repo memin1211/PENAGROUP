@@ -1,6 +1,6 @@
 <body class="fixed-sn light-blue-skin" >
     <header>
-        <nav class="navbar fixed-top info-color navbar-expand-lg scrolling-navbar double-nav">
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav info-color">
             <div class="float-left">
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
             </div>

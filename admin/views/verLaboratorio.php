@@ -1,63 +1,55 @@
-<div class="tab-pane fade in show active" id="verLaboratorio" role="tabpanel">
-   <!--Pagination -->
-      <?php include_once("../include/paginador.php"); ?>
-   <!--Fin Pagination -->
-   <br>
-    <div class="card">
-      <div class="card-body">
-          <!--Table-->
-          <table class="table table-hover table-responsive-md table-fixed">
-              <!--Table head-->
-              <thead class="special-color white-text">
-                  <tr>
-                      <th>CODIGO</th>
-                      <th>LABORATORIO</th>
-                      <th>ABREVIATURA</th>
-                      <th>DIRECCIÓN</th>
-                      <th>TÉLEFONO FIJO</th>
-                      <th>CÉLULAR</th>
-                      <th>CORREO</th>
-                      <th>ESTADO</th>
-                  </tr>
-              </thead>
-              <!--Table head-->
-
-              <!--Table body-->
-              <tbody>
-                  <tr>
-                      <th scope="row">1</th>
-                      <td> LABORATORIOS SAIMED</td>
-                      <td>SAIMED</td>
-                      <td>SAN SALVADOR, SAN SALVADOR.</td>
-                      <td>2225-6352</td>
-                      <td></td>
-                      <td>RECEPCION@SAIMED.COM</td>
-                      <td>ACTIVO</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>LABORATORIOS PAIL</td>
-                    <td>PAIL</td>
-                    <td>SAN SALVADOR, SAN SALVADOR.</td>
-                    <td>2225-6352</td>
-                    <td></td>
-                    <td>RECEPCION@PAIL.COM</td>
-                    <td>ACTIVO</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>LABORATORIOS GENOMMA LAB</td>
-                    <td>GENOMMA LAB</td>
-                    <td>SAN SALVADOR, SAN SALVADOR.</td>
-                    <td>2225-6352</td>
-                    <td></td>
-                    <td>RECEPCION@GENOMMALAB.COM</td>
-                    <td>ACTIVO</td>
-                  </tr>
-              </tbody>
-              <!--Table body-->
-          </table>
-          <!--Table-->
-      </div>
-  </div>
-</div>
+<?php
+require_once("../include/validarSesion.php");
+$Accion = "El Usuario ha Ingresado a Ver Laboratorios";
+require_once("../include/bitacora.php");
+include_once("../controllers/controllers_Laboratorio.php");
+?>
+   <body>
+      <div class="container Title-Margin">
+        <div class="row info-color  text-center" style="border-radius: 10px;">
+                <label class="h3 font-italic white-text" style="margin-left:15px;">Catálogo de Laboratorios</label>
+        </div>
+      </div>
+         <div class="container">
+             <!-- Tab panels -->
+                        <div class="row Card-Bottom">
+                         <table id="example" class="display" cellspacing="0" width="100%">
+                             <thead>
+                                <tr>
+                                   <th>CÓDIGO</th>
+                                   <th>NOMBRE</th>
+                                   <th>NOMBRE LEGAL</th>
+                                   <th>ABREVIATURA</th>
+                                   <th>ESTADO</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <?php
+                                   foreach ($MatrizLaboratorio as $value) {
+                                     ?>
+                                   <tr>
+                                      <td><?php echo $value['Id']; ?></td>
+                                      <td><?php  echo $value['Nombre']; ?></td>
+                                      <td><?php echo $value['Nombre_Legal']; ?></td>
+                                      <td><?php  echo $value['Abreviatura']; ?></td>
+                                      <td><?php  echo $value['Estado']; ?></td>
+                                   </tr>
+                                <?php
+                                   }
+                                 ?>
+                             </tbody>
+                             <tfoot>
+                                <tr>
+                                  <th>CÓDIGO</th>
+                                  <th>NOMBRE</th>
+                                  <th>NOMBRE LEGAL</th>
+                                  <th>ABREVIATURA</th>
+                                  <th>ESTADO</th>
+                                </tr>
+                             </tfoot>
+                         </table>
+                       </div>
+                    </div>
+      <?php include_once("../include/footer.php"); ?>
+   </body>
+</html>

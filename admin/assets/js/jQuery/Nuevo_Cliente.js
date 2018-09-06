@@ -1,0 +1,40 @@
+//Nuevo Proveedor
+jQuery(document).on('submit','#FormNuevoCliente',function(event){
+            event.preventDefault();
+            jQuery.ajax({
+                url:'../controllers/controllers_Cliente.php',
+                type:'POST',
+                dataType:'json',
+                data:$(this).serialize(),
+                beforeSend:function(){
+                  toastr["info"]("Espere un Momento...");
+                  setTimeout(function(){
+                    toastr["success"]("Cliente Creado Exitosamente!");
+                    document.getElementById('PrimerNombreCliente').value='';
+                    document.getElementById('SegundoNombreCliente').value='';
+                    document.getElementById('TercerNombreCliente').value='';
+                    document.getElementById('PrimerApellidoCliente').value='';
+                    document.getElementById('SegundoApellidoCliente').value='';
+                    document.getElementById('FechaNacimientoCliente').value='';
+                    document.getElementById('EstadoCivilCliente').value='';
+                    document.getElementById('GeneroCliente').value='';
+                    document.getElementById('DireccionCliente').value='';
+                    document.getElementById('TelefonoCliente').value='';
+                    document.getElementById('EmpresaCliente').value='';
+                    document.getElementById('GiroCliente').value='';
+                    document.getElementById('NitCliente').value='';
+                    document.getElementById('NrcCliente').value='';
+                    document.getElementById('IdTipoCliente').value='';
+                  },3000);
+                }
+              })
+              .done(function(respuesta){
+                console.log(respuesta);
+              })
+              .fail(function(respuesta){
+                console.log(respuesta.responseText);
+              })
+              .always(function(){
+                console.log("complete");
+            });
+      });
