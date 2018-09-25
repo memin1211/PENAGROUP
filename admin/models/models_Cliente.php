@@ -21,7 +21,7 @@
       }
 
       public function get_Cliente(){
-       $consulta=$this->db->query("SELECT A.Id, A.Primer_Nombre, A.Segundo_Nombre, A.Primer_Apellido, A.Segundo_Apellido, A.Direccion, A.Nrc, B.Nombre, C.Codigo_Cuenta, D.Nombre AS Estado FROM erp_cliente A
+       $consulta=$this->db->query("SELECT A.Id, A.Primer_Nombre, A.Segundo_Nombre, A.Primer_Apellido, A.Segundo_Apellido, A.Direccion, A.Nit,A.Nrc, B.Nombre, C.Codigo_Cuenta, D.Nombre AS Estado FROM erp_cliente A
          INNER JOIN erp_tipo_cliente B ON (B.Id=A.Id_Tipo_Cliente)
          INNER JOIN erp_cuenta_cliente C ON (C.Id=A.Id_Cuenta_Cliente)
          INNER JOIN erp_estado D ON (D.Id=A.Id_Estado)");
