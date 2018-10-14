@@ -7,9 +7,9 @@
             <div class="breadcrumb-dn mr-auto">
                 <p><?php echo $Sucursal;?></p>
             </div>
-            <ul class="nav navbar-nav nav-flex-icons ml-auto" style="margin-bottom: -20px;">
+            <ul class="nav navbar-nav nav-flex-icons ml-auto" style="margin-bottom: -20px;"> <!-- mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg -->
                 <li class="nav-item">
-                    <a class="nav-link"><span class="clearfix d-none d-sm-inline-block chip info-color  text-white"><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"><?php echo $_SESSION['usuario_actual']['Primer_Nombre'].' '.$_SESSION['usuario_actual']['Primer_Apellido']?></span></a>
+                    <a class="nav-link"><span class="clearfix d-none d-sm-inline-block chip info-color  text-white"><img src="https://mdbootstrap.com/img/Photos/Avatars/img(21).jpg"><?php echo $_SESSION['usuario_actual']['Primer_Nombre'].' '.$_SESSION['usuario_actual']['Primer_Apellido']?></span></a>
                 </li>
                 <li class="nav-item">
                    <a class="nav-link" href="../include/salir.php"><span class="clearfix d-sm-inline-block chip info-color  text-white"><i class="fa fa-power-off" aria-hidden="true"></i>SALIR</span></a>

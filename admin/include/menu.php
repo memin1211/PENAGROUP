@@ -10,10 +10,10 @@
   //Consultando Menu del Usuario
   $IdUsuario=$_SESSION['usuario_actual']['Id'];
   $titulo=$mysqli->prepare("SELECT C.Id_Menu_Padre,D.Id,D.Nombre FROM erp_menu_usuario A
-    INNER JOIN erp_menu C ON (A.Id_Menu = C.Id AND C.Id_Modulo = ?)
+    INNER JOIN erp_menu C ON (A.Id_Menu = C.Id AND C.Id_Modulo = ? AND A.Id_Estado=1)
     INNER JOIN erp_menu D ON (C.Id_Menu_Padre = D.Id)
-    INNER JOIN erp_usuario G ON (G.Id = A.Id_Usuario) WHERE G.Id = 1 AND A.Id_Estado=1 GROUP BY D.Id,D.Nombre ORDER BY Nombre ASC");
-  $titulo->bind_param('s',$modulo);
+    INNER JOIN erp_usuario G ON (G.Id = A.Id_Usuario) WHERE G.Id = ? AND A.Id_Estado=1 GROUP BY D.Id,D.Nombre ORDER BY Nombre ASC");
+  $titulo->bind_param('si',$modulo, $IdUsuario);
   $titulo->execute();
   $resultado1=$titulo->get_result();
 ?>

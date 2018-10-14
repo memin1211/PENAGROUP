@@ -54,7 +54,7 @@
 
       $Fecha=date('Y-d-m', strtotime($F_Creacion));
       $FechaNac=date('Y-m-d', strtotime($Fecha_Nacimiento));
-      $db1=mysqli_connect('localhost','id5392174_mpena','P@100514','id5392174_penagroup_erpdev');
+      $db1=mysqli_connect('localhost','root','','id5392174_penagroup_erpdev');
 
       //Seleccionadmos un array de todos los ID de las cuentas en la BD
       $sql0 = "SELECT Id FROM erp_cuenta_cliente";

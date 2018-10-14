@@ -56,7 +56,7 @@
 
          //Consultamos el ID del Usuario antes Ingresado
          $sqlcli = "SELECT Id FROM erp_usuario WHERE Usuario='$UsuarioSesion' AND Clave=sha2('$Clave','sha512')";
-         $db0=mysqli_connect('localhost','id5392174_mpena','P@100514','id5392174_penagroup_erpdev');
+         $db0=mysqli_connect('localhost','root','','id5392174_penagroup_erpdev');
          $rcli=mysqli_query($db0, $sqlcli) or die(mysqli_error($db0));
          while ($a=mysqli_fetch_assoc($rcli))
          {
@@ -68,7 +68,7 @@
          //Creamos los Accesos a la Sucursal
          foreach ($IdSucusalAsig as $key => $value) {
             $sqlcli = "INSERT INTO erp_sucursal_usuario(Id_Usuario, Id_Sucursal) VALUES ($Id,$value)";
-            $db1=mysqli_connect('localhost','id5392174_mpena','P@100514','id5392174_penagroup_erpdev');
+            $db1=mysqli_connect('localhost','root','','id5392174_penagroup_erpdev');
             $rs=mysqli_query($db1, $sqlcli) or die(mysqli_error($db1));
          }
          mysqli_free_result($rs);
