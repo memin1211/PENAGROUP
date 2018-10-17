@@ -13,7 +13,7 @@
                  <div class="row col">
                    <!-- Default input name -->
                     <label for="NombreUsuario" class="grey-text">Usuario</label>
-                    <input type="text" id="NombreUsuario" name="NombreUsuario" class="form-control" style="width:90%;" value="MIGUEL PEÑA" disabled>
+                    <input type="text" id="NombreUsuario" name="NombreUsuario" class="form-control" style="width:90%;" value="" disabled>
                  </div>
                  <div class="row col">
                    <label>Módulos</label>

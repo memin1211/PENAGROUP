@@ -80,5 +80,14 @@
        }
    }
 
+   public function find($BuscarId)
+   {
+      $consulta=$this->db->query("SELECT Id, Primer_Nombre, Primer_Apellido FROM erp_usuario WHERE Id=$BuscarId");
+      while ($a=$consulta->fetch(PDO::FETCH_ASSOC)) {
+        $this->UsuarioFind[]=$a;
+      }
+      return $this->UsuarioFind;
+   }
+
 }
  ?>

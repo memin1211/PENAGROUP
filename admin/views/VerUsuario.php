@@ -40,9 +40,7 @@ include_once("../controllers/controllers_Usuario.php");
                                       <td><?= date('d-m-Y', strtotime($value['Fecha_Registro'])); ?></td>
                                       <td><?= $value['Estado']; ?></td>
                                       <td><i class="fa fa-key puntero" aria-hidden="true" data-toggle="modal" data-target="#ModalClave" title="Modificar Clave"></i></td>
-                                      <td>
-                                         <a href="iframePermisos.php?Cod_Accion=1&Formulario=Modificar&IdUsuario=<?= $value['Id'];?>" style="color:gray;" onClick="changeCSS('../assets/iframe/faceboxpermisos.css', 0);" rel="facebox"><i class="fa fa-gear puntero" aria-hidden="true" title="Modificar Permisos"></i></a>
-                                      </td>
+                                      <td><i class="fa fa-gear puntero" aria-hidden="true" data-toggle="modal" data-target="#ModalPermisos" title="Modificar Permisos<?= $value['Id']; ?>"></i></td>
                                    </tr>
                                 <?php
                                    }
@@ -65,16 +63,16 @@ include_once("../controllers/controllers_Usuario.php");
                        </div>
                     </div>
 
+                    <div class="row">
+                      <!-- Modal Modificar Clave-->
+                        <?php include_once("../include/Modificar_Clave_Usuario.php");?>
+                      <!-- Fin Modal Modificar Clave-->
+                    </div>
+
                 <div class="row">
-                  <!-- Modal Modificar Clave-->
                     <?php include_once("../include/Modificar_Permiso_Usuario.php");?>
-                  <!-- Fin Modal Modificar Clave-->
                 </div>
-<!--
-                <div class="row">
-                    <?php// include_once("../include/Modificar_Permiso_Usuario.php");?>
-                </div>
--->
+
 <script src="../assets/iframe/facebox.js" type="text/javascript"></script>
 <script type="text/javascript">
 function changeCSS(cssFile, cssLinkIndex)
