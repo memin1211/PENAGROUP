@@ -36,7 +36,8 @@
     }
 
     public function get_Producto(){
-      $Id_Sucursal=$_GET['Id_Sucursal'];
+    //  $Id_Sucursal=$_GET['Id_Sucursal'];
+      $Id_Sucursal=1;
      $consulta=$this->db->query("SELECT E.Id, E.Codigo_Barra, E.Nombre AS Producto, H.Abreviatura AS Laboratorio, I.Nombre AS Categoria, F.Presentacion AS Presentacion, D.Fecha_Vencimiento, A.Existencia, A.Costo_Unidad, K.Precio_Unidad, J.Nombre_Corto FROM erp_kardex A
 INNER JOIN erp_lote D
 INNER JOIN erp_transaccion_kardex B ON (A.Id=B.Id_Kardex)

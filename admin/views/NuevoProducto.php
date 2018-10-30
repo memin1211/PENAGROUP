@@ -39,7 +39,7 @@ include_once("../controllers/controllers_Producto.php");
                        <div class="row">
                           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                              <!-- Material input text -->
-                             <select class="mdb-select colorful-select dropdown-info">
+                             <select class="mdb-select colorful-select dropdown-info" name="IdLaboratorio">
                                 <option value="" disabled selected>-Seleccione-</option>
                                 <?php
                                    foreach ($MatrizLaboratorio as $value) {
@@ -54,7 +54,7 @@ include_once("../controllers/controllers_Producto.php");
 
                           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                              <!-- Material input text -->
-                             <select class="mdb-select colorful-select dropdown-info">
+                             <select class="mdb-select colorful-select dropdown-info" name="IdPresentacion">
                                 <option value="" disabled selected>-Seleccione-</option>
                                 <?php
                                    foreach ($MatrizPresentacion as $value) {
@@ -69,7 +69,7 @@ include_once("../controllers/controllers_Producto.php");
 
                           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                              <!-- Material input text -->
-                             <select class="mdb-select colorful-select dropdown-info">
+                             <select class="mdb-select colorful-select dropdown-info" name="IdCategoria">
                                 <option value="" disabled selected>-Seleccione-</option>
                                 <?php
                                    foreach ($MatrizCategoria as $value) {
@@ -127,6 +127,6 @@ include_once("../controllers/controllers_Producto.php");
             </div>
       <?php include_once("../include/footer.php"); ?>
       <script type="text/javascript" src="../assets/js/ValidacionesJS/ValidacionSucursal.js"></script>
-      <script type="text/javascript" src="../assets/js/jQuery/Nuevo_Sucursal.js"></script>
+      <script type="text/javascript" src="../assets/js/jQuery/Nuevo_Producto.js"></script>
    </body>
 </html>
