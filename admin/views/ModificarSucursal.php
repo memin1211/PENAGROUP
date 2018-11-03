@@ -1,5 +1,5 @@
 <?php
-require_once("../include/validarSesionIframe.php");
+require_once("../include/validarSesion.php");
 $Accion = "El Usuario ha Ingresado a Modificar Sucursal";
 require_once("../include/bitacora.php");
 $Cod_Accion=isset($_REQUEST['Cod_Accion']) ? $_REQUEST['Cod_Accion']:NULL;
